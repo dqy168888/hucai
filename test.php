@@ -1,2 +1,2 @@
 <?php
-echo 'zzzz';hjklertghjklertyuio
+echo 'zzzz';
