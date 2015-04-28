@@ -1,0 +1,56 @@
+<?php
+return array (
+  1 => 
+  array (
+    'siteid' => '1',
+    'name' => '默认站点',
+    'dirname' => '',
+    'domain' => 'http://www.hc.com/',
+    'site_title' => '虎彩 - 让印刷走进千家万户',
+    'keywords' => '虎彩·印艺专家，中国最具特色的创新型印艺企业，拥有亚洲规模最大的数字印刷机群。为您提供包装印刷、安全印务、个性影像、个性包装、按需出版等个性化定制服务',
+    'description' => '虎彩是全球最优秀的高端奢侈品纸包装解决方案供应商，名列中国印刷百强第九名。我们致力于让印刷走进千家万户，围绕客户的需求持续创新，为企业提供具有竞争力整体印刷解决方案，为用户提供优质的个性化定制服务，持续提升客户体验，为客户创造最大价值。虎彩人的使命正在于将千家万户的幸福、美好回忆，用先进的印刷技术和个性化印品将其永久珍藏，让其触手可及。',
+    'release_point' => '',
+    'default_style' => 'hucai',
+    'template' => 'hucai',
+    'setting' => 'array (
+  \'upload_maxsize\' => \'2048\',
+  \'upload_allowext\' => \'jpg|jpeg|gif|bmp|png|doc|docx|xls|xlsx|ppt|pptx|pdf|txt|rar|zip|swf\',
+  \'watermark_enable\' => \'1\',
+  \'watermark_minwidth\' => \'300\',
+  \'watermark_minheight\' => \'300\',
+  \'watermark_img\' => \'statics/images/water//mark.png\',
+  \'watermark_pct\' => \'85\',
+  \'watermark_quality\' => \'80\',
+  \'watermark_pos\' => \'9\',
+)',
+    'uuid' => 'd6ecd476-e199-11e4-acca-00ac488648d9',
+    'url' => 'http://www.hc.com/',
+  ),
+  2 => 
+  array (
+    'siteid' => '2',
+    'name' => '英文站点',
+    'dirname' => 'en',
+    'domain' => 'http://www.hc.com/en/',
+    'site_title' => 'Hucais Printing',
+    'keywords' => 'keywords',
+    'description' => 'descptions',
+    'release_point' => '',
+    'default_style' => 'hucai_en',
+    'template' => 'hucai_en',
+    'setting' => 'array (
+  \'upload_maxsize\' => \'2000\',
+  \'upload_allowext\' => \'jpg|jpeg|gif|bmp|png|doc|docx|xls|xlsx|ppt|pptx|pdf|txt|rar|zip|swf\',
+  \'watermark_enable\' => \'1\',
+  \'watermark_minwidth\' => \'300\',
+  \'watermark_minheight\' => \'300\',
+  \'watermark_img\' => \'http://www.hc.com/statics/images/water/mark.gif\',
+  \'watermark_pct\' => \'100\',
+  \'watermark_quality\' => \'80\',
+  \'watermark_pos\' => \'9\',
+)',
+    'uuid' => '',
+    'url' => 'http://www.hc.com/en/',
+  ),
+);
+?>
