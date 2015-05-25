@@ -65,8 +65,8 @@ class setting extends admin {
 	 */
 	public function public_test_mail() {
 		pc_base::load_sys_func('mail');
-		$subject = 'phpcms test mail';
-		$message = 'this is a test mail from phpcms team';
+		$subject = '测试邮件';
+		$message = '这是一封来自虎彩的测试邮件！';
 		$mail= Array (
 			'mailsend' => 2,
 			'maildelimiter' => 1,
