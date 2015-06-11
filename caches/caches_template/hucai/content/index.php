@@ -1,7 +1,7 @@
-{template "content","header"}
+<?php defined('IN_PHPCMS') or exit('No permission resources.'); ?><?php include template("content","header"); ?>
 <!--main-->
 <div id="home_slider" class="flexslider block_home_slider">
-    <script language="javascript" src="{APP_PATH}index.php?m=poster&c=index&a=show_poster&id=11"></script>
+    <script language="javascript" src="<?php echo APP_PATH;?>index.php?m=poster&c=index&a=show_poster&id=11"></script>
   </div>
   <div class="p1">
     <div class="indexNews"> <span>新闻</span>
@@ -53,18 +53,18 @@ $(".indexNews").hover(function(){
     <div class="p2">
       <ul>
         <li>
-          <div class="opacity"><a href="#"><img src="{IMG_PATH}hucai/bg/png2.png"></a><a href="#"><img src="{IMG_PATH}hucai/bg/png3.png"></a><a href="#"><img src="{IMG_PATH}hucai/bg/png4s.png"/></a></div>
-          <a href="#"><img src="{IMG_PATH}hucai/bg/8.jpg" class="opacity" />
+          <div class="opacity"><a href="#"><img src="<?php echo IMG_PATH;?>hucai/bg/png2.png"></a><a href="#"><img src="<?php echo IMG_PATH;?>hucai/bg/png3.png"></a><a href="#"><img src="<?php echo IMG_PATH;?>hucai/bg/png4s.png"/></a></div>
+          <a href="#"><img src="<?php echo IMG_PATH;?>hucai/bg/8.jpg" class="opacity" />
           <p><span>互联网思维给虎彩带来了什么</span><b>虎彩印艺股份有限公司总裁陈成稳先生在互联网思维集训上的总结发言...<i>查看更多</i></b></p>
           </a></li>
         <li>
-          <div class="opacity"><a href="#"><img src="{IMG_PATH}hucai/bg/png2.png"></a><a href="#"><img src="{IMG_PATH}hucai/bg/png3.png"></a><a href="#"><img src="{IMG_PATH}hucai/bg/png4s.png"/></a></div>
-          <a href="#"><img src="{IMG_PATH}hucai/bg/6.jpg" class="opacity" />
+          <div class="opacity"><a href="#"><img src="<?php echo IMG_PATH;?>hucai/bg/png2.png"></a><a href="#"><img src="<?php echo IMG_PATH;?>hucai/bg/png3.png"></a><a href="#"><img src="<?php echo IMG_PATH;?>hucai/bg/png4s.png"/></a></div>
+          <a href="#"><img src="<?php echo IMG_PATH;?>hucai/bg/6.jpg" class="opacity" />
           <p><span>互联网思维给虎彩带来了什么</span><b>虎彩印艺股份有限公司总裁陈成稳先生在互联网思维集训上的总结发言...<i>查看更多</i></b></p>
           </a></li>
         <li>
-          <div class="opacity"><a href="#"><img src="{IMG_PATH}hucai/bg/png2.png"></a><a href="#"><img src="{IMG_PATH}hucai/bg/png3.png"></a><a href="#"><img src="{IMG_PATH}hucai/bg/png4s.png"/></a></div>
-          <a href="#"><img src="{IMG_PATH}hucai/bg/7.jpg" class="opacity" />
+          <div class="opacity"><a href="#"><img src="<?php echo IMG_PATH;?>hucai/bg/png2.png"></a><a href="#"><img src="<?php echo IMG_PATH;?>hucai/bg/png3.png"></a><a href="#"><img src="<?php echo IMG_PATH;?>hucai/bg/png4s.png"/></a></div>
+          <a href="#"><img src="<?php echo IMG_PATH;?>hucai/bg/7.jpg" class="opacity" />
           <p><span>互联网思维给虎彩带来了什么</span><b>虎彩印艺股份有限公司总裁陈成稳先生在互联网思维集训上的总结发言...<i>查看更多</i></b></p>
           </a></li>
       </ul>
@@ -72,7 +72,7 @@ $(".indexNews").hover(function(){
     </div>
   </div>
   <div class="mv">
-    <video poster="{IMG_PATH}hucai/bg/4.jpg" preload="none" controls="" id="myVideo" width="100%">
+    <video poster="<?php echo IMG_PATH;?>hucai/bg/4.jpg" preload="none" controls="" id="myVideo" width="100%">
       <source type="video/mp4" src="http://media.w3.org/2010/05/sintel/trailer.mp4" id="mp4"></source>
       <source type="video/webm" src="http://media.w3.org/2010/05/sintel/trailer.webm" id="webm"></source>
       <source type="video/ogg" src="http://media.w3.org/2010/05/sintel/trailer.ogv" id="ogv"></source>
@@ -124,18 +124,18 @@ function setVol(num){
   <div class="p2">
     <ul>
       <li>
-        <div class="opacity"><a href="#"><img src="{IMG_PATH}hucai/bg/png2.png"></a><a href="#"><img src="{IMG_PATH}hucai/bg/png3.png"></a><a href="#"><img src="{IMG_PATH}hucai/bg/png4s.png"/></a></div>
-        <a href="#"><img src="{IMG_PATH}hucai/bg/8.jpg" class="opacity" />
+        <div class="opacity"><a href="#"><img src="<?php echo IMG_PATH;?>hucai/bg/png2.png"></a><a href="#"><img src="<?php echo IMG_PATH;?>hucai/bg/png3.png"></a><a href="#"><img src="<?php echo IMG_PATH;?>hucai/bg/png4s.png"/></a></div>
+        <a href="#"><img src="<?php echo IMG_PATH;?>hucai/bg/8.jpg" class="opacity" />
         <p><span>互联网思维给虎彩带来了什么</span><b>虎彩印艺股份有限公司总裁陈成稳先生在互联网思维集训上的总结发言...<i>查看更多</i></b></p>
         </a></li>
       <li>
-        <div class="opacity"><a href="#"><img src="{IMG_PATH}hucai/bg/png2.png"></a><a href="#"><img src="{IMG_PATH}hucai/bg/png3.png"></a><a href="#"><img src="{IMG_PATH}hucai/bg/png4s.png"/></a></div>
-        <a href="#"><img src="{IMG_PATH}hucai/bg/6.jpg" class="opacity" />
+        <div class="opacity"><a href="#"><img src="<?php echo IMG_PATH;?>hucai/bg/png2.png"></a><a href="#"><img src="<?php echo IMG_PATH;?>hucai/bg/png3.png"></a><a href="#"><img src="<?php echo IMG_PATH;?>hucai/bg/png4s.png"/></a></div>
+        <a href="#"><img src="<?php echo IMG_PATH;?>hucai/bg/6.jpg" class="opacity" />
         <p><span>互联网思维给虎彩带来了什么</span><b>虎彩印艺股份有限公司总裁陈成稳先生在互联网思维集训上的总结发言...<i>查看更多</i></b></p>
         </a></li>
       <li>
-        <div class="opacity"><a href="#"><img src="{IMG_PATH}hucai/bg/png2.png"></a><a href="#"><img src="{IMG_PATH}hucai/bg/png3.png"></a><a href="#"><img src="{IMG_PATH}hucai/bg/png4s.png"/></a></div>
-        <a href="#"><img src="{IMG_PATH}hucai/bg/7.jpg" class="opacity" />
+        <div class="opacity"><a href="#"><img src="<?php echo IMG_PATH;?>hucai/bg/png2.png"></a><a href="#"><img src="<?php echo IMG_PATH;?>hucai/bg/png3.png"></a><a href="#"><img src="<?php echo IMG_PATH;?>hucai/bg/png4s.png"/></a></div>
+        <a href="#"><img src="<?php echo IMG_PATH;?>hucai/bg/7.jpg" class="opacity" />
         <p><span>互联网思维给虎彩带来了什么</span><b>虎彩印艺股份有限公司总裁陈成稳先生在互联网思维集训上的总结发言...<i>查看更多</i></b></p>
         </a></li>
     </ul>
@@ -147,7 +147,7 @@ function setVol(num){
         <li>
           <div class="a1"><b><i>虎彩介绍</i></b>
             <div class="a2">
-              <div class="a3"><img src="{IMG_PATH}hucai/bg/3.jpg" /><span>虎彩印艺股份有限公司成立于1988年，是一家以包装产品的开发、设计、印刷为核心的高新技术企业，中国最优秀的高端奢侈品纸包装供应商，名列中国印刷百强第九名。</span></div>
+              <div class="a3"><img src="<?php echo IMG_PATH;?>hucai/bg/3.jpg" /><span>虎彩印艺股份有限公司成立于1988年，是一家以包装产品的开发、设计、印刷为核心的高新技术企业，中国最优秀的高端奢侈品纸包装供应商，名列中国印刷百强第九名。</span></div>
               <a href="#" class="more">查看更多</a></div>
           </div>
         </li>
@@ -188,10 +188,10 @@ function setVol(num){
           <div class="a1"><b><i>服务支持</i></b>
             <div class="a2">
               <dl class="icon1">
-                <dd><a href="#"><span><img src="{IMG_PATH}hucai/bg/bg14.gif" /></span><i>下载中心 </i></a></dd>
-                <dd><a href="#"><span><img src="{IMG_PATH}hucai/bg/bg15.gif" /></span><i>影像连锁门店查询 </i></a></dd>
-                <dd><a href="#"><span><img src="{IMG_PATH}hucai/bg/bg16.gif" /></span><i>意见反馈</i></a></dd>
-                <dd><a href="#"><span><img src="{IMG_PATH}hucai/bg/bg17.gif" /></span><i>联系我们 </i></a></dd>
+                <dd><a href="#"><span><img src="<?php echo IMG_PATH;?>hucai/bg/bg14.gif" /></span><i>下载中心 </i></a></dd>
+                <dd><a href="#"><span><img src="<?php echo IMG_PATH;?>hucai/bg/bg15.gif" /></span><i>影像连锁门店查询 </i></a></dd>
+                <dd><a href="#"><span><img src="<?php echo IMG_PATH;?>hucai/bg/bg16.gif" /></span><i>意见反馈</i></a></dd>
+                <dd><a href="#"><span><img src="<?php echo IMG_PATH;?>hucai/bg/bg17.gif" /></span><i>联系我们 </i></a></dd>
                 <div class="clear"></div>
               </dl>
               <a href="#" class="more">查看更多</a></div>
@@ -212,4 +212,4 @@ $(function(){
       <div class="clear"></div>
     </div>
   </div>
-{template "content","footer"}
+<?php include template("content","footer"); ?>

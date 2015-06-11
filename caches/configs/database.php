@@ -4,7 +4,7 @@ return array (
 	'default' => array (
 		'hostname' => 'localhost',
 		'port' => 3306,
-		'database' => 'hucai',
+		'database' => 'phpcms',
 		'username' => 'root',
 		'password' => '123456',
 		'tablepre' => 'hc_',
