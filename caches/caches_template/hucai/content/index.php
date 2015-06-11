@@ -1,16 +1,20 @@
 <?php defined('IN_PHPCMS') or exit('No permission resources.'); ?><?php include template("content","header"); ?>
 <!--main-->
 <div id="home_slider" class="flexslider block_home_slider">
-    <script language="javascript" src="<?php echo APP_PATH;?>index.php?m=poster&c=index&a=show_poster&id=11"></script>
+    <div class="flex-viewport" id="flex_viewport">
+    	<script language="javascript" src="<?php echo APP_PATH;?>index.php?m=poster&c=index&a=show_poster&id=11"></script>
+    </div>
   </div>
   <div class="p1">
     <div class="indexNews"> <span>新闻</span>
       <div class="newsDemo">
+      <?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"content\" data=\"op=content&tag_md5=351ff98a728399744b438e2d3187c0a0&action=position&posid=9&order=id&num=10\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">编辑</a>";}$content_tag = pc_base::load_app_class("content_tag", "content");if (method_exists($content_tag, 'position')) {$data = $content_tag->position(array('posid'=>'9','order'=>'id','limit'=>'10',));}?>
         <ul>
-          <li><a href="#">虎彩引爆按需出版市场，致力将数字印刷做到极致，引爆市场结出累累硕果。</a></li>
-          <li><a href="#">虎彩引爆按需出版市场，致力将数字印刷做到极致，引爆市场结出累累硕果。</a></li>
-          <li><a href="#">虎彩引爆按需出版市场，致力将数字印刷做到极致，引爆市场结出累累硕果。</a></li>
+        	<?php $n=1; if(is_array($data)) foreach($data AS $k => $v) { ?>
+          <li><a href="<?php echo $v['url'];?>"><?php echo $v['title'];?></a></li>
+           <?php $n++;}unset($n); ?>
         </ul>
+        <?php if(defined('IN_ADMIN') && !defined('HTML')) {echo '</div>';}?>
       </div>
       <div class="icon"> <a class="up"></a> <a class="dowm"></a> </div>
       <script type="text/javascript">
@@ -51,23 +55,17 @@ $(".indexNews").hover(function(){
 </script> 
     </div>
     <div class="p2">
+    <?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"content\" data=\"op=content&tag_md5=7a7a0e753182bcf4d42b038435e627ed&action=position&posid=2&order=listorder+DESC&num=3\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">编辑</a>";}$content_tag = pc_base::load_app_class("content_tag", "content");if (method_exists($content_tag, 'position')) {$data = $content_tag->position(array('posid'=>'2','order'=>'listorder DESC','limit'=>'3',));}?>
       <ul>
+      <?php $n=1;if(is_array($data)) foreach($data AS $r) { ?>
         <li>
           <div class="opacity"><a href="#"><img src="<?php echo IMG_PATH;?>hucai/bg/png2.png"></a><a href="#"><img src="<?php echo IMG_PATH;?>hucai/bg/png3.png"></a><a href="#"><img src="<?php echo IMG_PATH;?>hucai/bg/png4s.png"/></a></div>
-          <a href="#"><img src="<?php echo IMG_PATH;?>hucai/bg/8.jpg" class="opacity" />
-          <p><span>互联网思维给虎彩带来了什么</span><b>虎彩印艺股份有限公司总裁陈成稳先生在互联网思维集训上的总结发言...<i>查看更多</i></b></p>
+          <a href="<?php echo $r['url'];?>" title="<?php echo $r['title'];?>"><img src="<?php echo thumb($r[thumb],370,280);?>" class="opacity" width="370" height="280" />
+          <p><span><?php echo str_cut($r[title],36,'');?></span><b><?php echo str_cut($r[description],112);?><i>查看更多</i></b></p>
           </a></li>
-        <li>
-          <div class="opacity"><a href="#"><img src="<?php echo IMG_PATH;?>hucai/bg/png2.png"></a><a href="#"><img src="<?php echo IMG_PATH;?>hucai/bg/png3.png"></a><a href="#"><img src="<?php echo IMG_PATH;?>hucai/bg/png4s.png"/></a></div>
-          <a href="#"><img src="<?php echo IMG_PATH;?>hucai/bg/6.jpg" class="opacity" />
-          <p><span>互联网思维给虎彩带来了什么</span><b>虎彩印艺股份有限公司总裁陈成稳先生在互联网思维集训上的总结发言...<i>查看更多</i></b></p>
-          </a></li>
-        <li>
-          <div class="opacity"><a href="#"><img src="<?php echo IMG_PATH;?>hucai/bg/png2.png"></a><a href="#"><img src="<?php echo IMG_PATH;?>hucai/bg/png3.png"></a><a href="#"><img src="<?php echo IMG_PATH;?>hucai/bg/png4s.png"/></a></div>
-          <a href="#"><img src="<?php echo IMG_PATH;?>hucai/bg/7.jpg" class="opacity" />
-          <p><span>互联网思维给虎彩带来了什么</span><b>虎彩印艺股份有限公司总裁陈成稳先生在互联网思维集训上的总结发言...<i>查看更多</i></b></p>
-          </a></li>
+        <?php $n++;}unset($n); ?>  
       </ul>
+      <?php if(defined('IN_ADMIN') && !defined('HTML')) {echo '</div>';}?>
       <div class="clear"></div>
     </div>
   </div>
@@ -122,23 +120,17 @@ function setVol(num){
     
   </div>
   <div class="p2">
-    <ul>
-      <li>
-        <div class="opacity"><a href="#"><img src="<?php echo IMG_PATH;?>hucai/bg/png2.png"></a><a href="#"><img src="<?php echo IMG_PATH;?>hucai/bg/png3.png"></a><a href="#"><img src="<?php echo IMG_PATH;?>hucai/bg/png4s.png"/></a></div>
-        <a href="#"><img src="<?php echo IMG_PATH;?>hucai/bg/8.jpg" class="opacity" />
-        <p><span>互联网思维给虎彩带来了什么</span><b>虎彩印艺股份有限公司总裁陈成稳先生在互联网思维集训上的总结发言...<i>查看更多</i></b></p>
-        </a></li>
-      <li>
-        <div class="opacity"><a href="#"><img src="<?php echo IMG_PATH;?>hucai/bg/png2.png"></a><a href="#"><img src="<?php echo IMG_PATH;?>hucai/bg/png3.png"></a><a href="#"><img src="<?php echo IMG_PATH;?>hucai/bg/png4s.png"/></a></div>
-        <a href="#"><img src="<?php echo IMG_PATH;?>hucai/bg/6.jpg" class="opacity" />
-        <p><span>互联网思维给虎彩带来了什么</span><b>虎彩印艺股份有限公司总裁陈成稳先生在互联网思维集训上的总结发言...<i>查看更多</i></b></p>
-        </a></li>
-      <li>
-        <div class="opacity"><a href="#"><img src="<?php echo IMG_PATH;?>hucai/bg/png2.png"></a><a href="#"><img src="<?php echo IMG_PATH;?>hucai/bg/png3.png"></a><a href="#"><img src="<?php echo IMG_PATH;?>hucai/bg/png4s.png"/></a></div>
-        <a href="#"><img src="<?php echo IMG_PATH;?>hucai/bg/7.jpg" class="opacity" />
-        <p><span>互联网思维给虎彩带来了什么</span><b>虎彩印艺股份有限公司总裁陈成稳先生在互联网思维集训上的总结发言...<i>查看更多</i></b></p>
-        </a></li>
-    </ul>
+    <?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"content\" data=\"op=content&tag_md5=e293260bb058dbf36da3301de91f1839&action=position&posid=1&order=listorder+DESC&num=3\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">编辑</a>";}$content_tag = pc_base::load_app_class("content_tag", "content");if (method_exists($content_tag, 'position')) {$data = $content_tag->position(array('posid'=>'1','order'=>'listorder DESC','limit'=>'3',));}?>
+      <ul>
+      <?php $n=1;if(is_array($data)) foreach($data AS $r) { ?>
+        <li>
+          <div class="opacity"><a href="#"><img src="<?php echo IMG_PATH;?>hucai/bg/png2.png"></a><a href="#"><img src="<?php echo IMG_PATH;?>hucai/bg/png3.png"></a><a href="#"><img src="<?php echo IMG_PATH;?>hucai/bg/png4s.png"/></a></div>
+          <a href="<?php echo $r['url'];?>" title="<?php echo $r['title'];?>"><img src="<?php echo thumb($r[thumb],370,280);?>" class="opacity" width="370" height="280" />
+          <p><span><?php echo str_cut($r[title],36,'');?></span><b><?php echo str_cut($r[description],112);?><i>查看更多</i></b></p>
+          </a></li>
+        <?php $n++;}unset($n); ?>  
+      </ul>
+      <?php if(defined('IN_ADMIN') && !defined('HTML')) {echo '</div>';}?>
     <div class="clear"></div>
   </div>
   <div class="p3">
@@ -154,33 +146,17 @@ function setVol(num){
         <li>
           <div class="a1"><b><i>新闻中心</i></b>
             <div class="a2">
+            <?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"content\" data=\"op=content&tag_md5=e293260bb058dbf36da3301de91f1839&action=position&posid=1&order=listorder+DESC&num=3\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">编辑</a>";}$content_tag = pc_base::load_app_class("content_tag", "content");if (method_exists($content_tag, 'position')) {$data = $content_tag->position(array('posid'=>'1','order'=>'listorder DESC','limit'=>'3',));}?>
               <dl class="newsCenter">
-                <dd><a href="#"><i>冰超干原浆 新妆领鲜上市</i>
-                  <div class="innerNews"><em>2015-2-15</em>
-                    <p>虎彩集团新春团拜会在虎门龙泉国际大酒店如约而至。从子公司相聚而来的厂长们、东莞区虎彩人...</p>
+              <?php $n=1;if(is_array($data)) foreach($data AS $r) { ?>
+                <dd> <a href="<?php echo $r['url'];?>" title="<?php echo $r['title'];?>"><i><?php echo str_cut($r[title],36,'');?></i>
+                  <div class="innerNews"><em><?php echo date('Y-m-d',$r[inputtime]);?></em>
+                    <p><?php echo str_cut($r[description],112);?></p>
                   </div>
                   </a></dd>
-                <dd><a href="#"><i>冰超干原浆 新妆领鲜上市</i>
-                  <div class="innerNews"><em>2015-2-15</em>
-                    <p>虎彩集团新春团拜会在虎门龙泉国际大酒店如约而至。从子公司相聚而来的厂长们、东莞区虎彩人...</p>
-                  </div>
-                  </a></dd>
-                <dd><a href="#"><i>冰超干原浆 新妆领鲜上市</i>
-                  <div class="innerNews"><em>2015-2-15</em>
-                    <p>虎彩集团新春团拜会在虎门龙泉国际大酒店如约而至。从子公司相聚而来的厂长们、东莞区虎彩人...</p>
-                  </div>
-                  </a></dd>
-                <dd><a href="#"><i>冰超干原浆 新妆领鲜上市</i>
-                  <div class="innerNews"><em>2015-2-15</em>
-                    <p>虎彩集团新春团拜会在虎门龙泉国际大酒店如约而至。从子公司相聚而来的厂长们、东莞区虎彩人...</p>
-                  </div>
-                  </a></dd>
-                <dd><a href="#"><i>冰超干原浆 新妆领鲜上市</i>
-                  <div class="innerNews"><em>2015-2-15</em>
-                    <p>虎彩集团新春团拜会在虎门龙泉国际大酒店如约而至。从子公司相聚而来的厂长们、东莞区虎彩人...</p>
-                  </div>
-                  </a></dd>
+               <?php $n++;}unset($n); ?>
               </dl>
+              <?php if(defined('IN_ADMIN') && !defined('HTML')) {echo '</div>';}?>
               <a href="#" class="more">查看更多</a></div>
           </div>
         </li>

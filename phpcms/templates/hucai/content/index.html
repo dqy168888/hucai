@@ -1,16 +1,20 @@
 {template "content","header"}
 <!--main-->
 <div id="home_slider" class="flexslider block_home_slider">
-    <script language="javascript" src="{APP_PATH}index.php?m=poster&c=index&a=show_poster&id=11"></script>
+    <div class="flex-viewport" id="flex_viewport">
+    	<script language="javascript" src="{APP_PATH}index.php?m=poster&c=index&a=show_poster&id=11"></script>
+    </div>
   </div>
   <div class="p1">
     <div class="indexNews"> <span>新闻</span>
       <div class="newsDemo">
+      {pc:content  action="position" posid="9" order="id" num="10"}
         <ul>
-          <li><a href="#">虎彩引爆按需出版市场，致力将数字印刷做到极致，引爆市场结出累累硕果。</a></li>
-          <li><a href="#">虎彩引爆按需出版市场，致力将数字印刷做到极致，引爆市场结出累累硕果。</a></li>
-          <li><a href="#">虎彩引爆按需出版市场，致力将数字印刷做到极致，引爆市场结出累累硕果。</a></li>
+        	{loop $data $k $v}
+          <li><a href="{$v[url]}">{$v[title]}</a></li>
+           {/loop}
         </ul>
+        {/pc}
       </div>
       <div class="icon"> <a class="up"></a> <a class="dowm"></a> </div>
       <script type="text/javascript">
@@ -51,23 +55,17 @@ $(".indexNews").hover(function(){
 </script> 
     </div>
     <div class="p2">
+    {pc:content  action="position" posid="2" order="listorder DESC" num="3"}
       <ul>
+      {loop $data $r}
         <li>
           <div class="opacity"><a href="#"><img src="{IMG_PATH}hucai/bg/png2.png"></a><a href="#"><img src="{IMG_PATH}hucai/bg/png3.png"></a><a href="#"><img src="{IMG_PATH}hucai/bg/png4s.png"/></a></div>
-          <a href="#"><img src="{IMG_PATH}hucai/bg/8.jpg" class="opacity" />
-          <p><span>互联网思维给虎彩带来了什么</span><b>虎彩印艺股份有限公司总裁陈成稳先生在互联网思维集训上的总结发言...<i>查看更多</i></b></p>
+          <a href="{$r[url]}" title="{$r[title]}"><img src="{thumb($r[thumb],370,280)}" class="opacity" width="370" height="280" />
+          <p><span>{str_cut($r[title],36,'')}</span><b>{str_cut($r[description],112)}<i>查看更多</i></b></p>
           </a></li>
-        <li>
-          <div class="opacity"><a href="#"><img src="{IMG_PATH}hucai/bg/png2.png"></a><a href="#"><img src="{IMG_PATH}hucai/bg/png3.png"></a><a href="#"><img src="{IMG_PATH}hucai/bg/png4s.png"/></a></div>
-          <a href="#"><img src="{IMG_PATH}hucai/bg/6.jpg" class="opacity" />
-          <p><span>互联网思维给虎彩带来了什么</span><b>虎彩印艺股份有限公司总裁陈成稳先生在互联网思维集训上的总结发言...<i>查看更多</i></b></p>
-          </a></li>
-        <li>
-          <div class="opacity"><a href="#"><img src="{IMG_PATH}hucai/bg/png2.png"></a><a href="#"><img src="{IMG_PATH}hucai/bg/png3.png"></a><a href="#"><img src="{IMG_PATH}hucai/bg/png4s.png"/></a></div>
-          <a href="#"><img src="{IMG_PATH}hucai/bg/7.jpg" class="opacity" />
-          <p><span>互联网思维给虎彩带来了什么</span><b>虎彩印艺股份有限公司总裁陈成稳先生在互联网思维集训上的总结发言...<i>查看更多</i></b></p>
-          </a></li>
+        {/loop}  
       </ul>
+      {/pc}
       <div class="clear"></div>
     </div>
   </div>
@@ -122,23 +120,17 @@ function setVol(num){
     
   </div>
   <div class="p2">
-    <ul>
-      <li>
-        <div class="opacity"><a href="#"><img src="{IMG_PATH}hucai/bg/png2.png"></a><a href="#"><img src="{IMG_PATH}hucai/bg/png3.png"></a><a href="#"><img src="{IMG_PATH}hucai/bg/png4s.png"/></a></div>
-        <a href="#"><img src="{IMG_PATH}hucai/bg/8.jpg" class="opacity" />
-        <p><span>互联网思维给虎彩带来了什么</span><b>虎彩印艺股份有限公司总裁陈成稳先生在互联网思维集训上的总结发言...<i>查看更多</i></b></p>
-        </a></li>
-      <li>
-        <div class="opacity"><a href="#"><img src="{IMG_PATH}hucai/bg/png2.png"></a><a href="#"><img src="{IMG_PATH}hucai/bg/png3.png"></a><a href="#"><img src="{IMG_PATH}hucai/bg/png4s.png"/></a></div>
-        <a href="#"><img src="{IMG_PATH}hucai/bg/6.jpg" class="opacity" />
-        <p><span>互联网思维给虎彩带来了什么</span><b>虎彩印艺股份有限公司总裁陈成稳先生在互联网思维集训上的总结发言...<i>查看更多</i></b></p>
-        </a></li>
-      <li>
-        <div class="opacity"><a href="#"><img src="{IMG_PATH}hucai/bg/png2.png"></a><a href="#"><img src="{IMG_PATH}hucai/bg/png3.png"></a><a href="#"><img src="{IMG_PATH}hucai/bg/png4s.png"/></a></div>
-        <a href="#"><img src="{IMG_PATH}hucai/bg/7.jpg" class="opacity" />
-        <p><span>互联网思维给虎彩带来了什么</span><b>虎彩印艺股份有限公司总裁陈成稳先生在互联网思维集训上的总结发言...<i>查看更多</i></b></p>
-        </a></li>
-    </ul>
+    {pc:content  action="position" posid="1" order="listorder DESC" num="3"}
+      <ul>
+      {loop $data $r}
+        <li>
+          <div class="opacity"><a href="#"><img src="{IMG_PATH}hucai/bg/png2.png"></a><a href="#"><img src="{IMG_PATH}hucai/bg/png3.png"></a><a href="#"><img src="{IMG_PATH}hucai/bg/png4s.png"/></a></div>
+          <a href="{$r[url]}" title="{$r[title]}"><img src="{thumb($r[thumb],370,280)}" class="opacity" width="370" height="280" />
+          <p><span>{str_cut($r[title],36,'')}</span><b>{str_cut($r[description],112)}<i>查看更多</i></b></p>
+          </a></li>
+        {/loop}  
+      </ul>
+      {/pc}
     <div class="clear"></div>
   </div>
   <div class="p3">
@@ -154,33 +146,17 @@ function setVol(num){
         <li>
           <div class="a1"><b><i>新闻中心</i></b>
             <div class="a2">
+            {pc:content  action="position" posid="1" order="listorder DESC" num="5"}
               <dl class="newsCenter">
-                <dd><a href="#"><i>冰超干原浆 新妆领鲜上市</i>
-                  <div class="innerNews"><em>2015-2-15</em>
-                    <p>虎彩集团新春团拜会在虎门龙泉国际大酒店如约而至。从子公司相聚而来的厂长们、东莞区虎彩人...</p>
+              {loop $data $r}
+                <dd> <a href="{$r[url]}" title="{$r[title]}"><i>{str_cut($r[title],36,'')}</i>
+                  <div class="innerNews"><em>{date('Y-m-d',$r[inputtime])}</em>
+                    <p>{str_cut($r[description],112)}</p>
                   </div>
                   </a></dd>
-                <dd><a href="#"><i>冰超干原浆 新妆领鲜上市</i>
-                  <div class="innerNews"><em>2015-2-15</em>
-                    <p>虎彩集团新春团拜会在虎门龙泉国际大酒店如约而至。从子公司相聚而来的厂长们、东莞区虎彩人...</p>
-                  </div>
-                  </a></dd>
-                <dd><a href="#"><i>冰超干原浆 新妆领鲜上市</i>
-                  <div class="innerNews"><em>2015-2-15</em>
-                    <p>虎彩集团新春团拜会在虎门龙泉国际大酒店如约而至。从子公司相聚而来的厂长们、东莞区虎彩人...</p>
-                  </div>
-                  </a></dd>
-                <dd><a href="#"><i>冰超干原浆 新妆领鲜上市</i>
-                  <div class="innerNews"><em>2015-2-15</em>
-                    <p>虎彩集团新春团拜会在虎门龙泉国际大酒店如约而至。从子公司相聚而来的厂长们、东莞区虎彩人...</p>
-                  </div>
-                  </a></dd>
-                <dd><a href="#"><i>冰超干原浆 新妆领鲜上市</i>
-                  <div class="innerNews"><em>2015-2-15</em>
-                    <p>虎彩集团新春团拜会在虎门龙泉国际大酒店如约而至。从子公司相聚而来的厂长们、东莞区虎彩人...</p>
-                  </div>
-                  </a></dd>
+               {/loop}
               </dl>
+              {/pc}
               <a href="#" class="more">查看更多</a></div>
           </div>
         </li>
