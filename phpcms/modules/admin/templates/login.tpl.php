@@ -7,7 +7,7 @@
 <title><?php echo L('phpcms_logon')?></title>
 <style type="text/css">
 	div{overflow:hidden; *display:inline-block;}div{*display:block;}
-	.login_box{background:url(<?php echo IMG_PATH?>admin_img/login_bg.jpg) no-repeat; width:602px; height:416px; overflow:hidden; position:absolute; left:50%; top:50%; margin-left:-301px; margin-top:-208px;}
+	.login_box{background:url(<?php echo IMG_PATH?>admin_img/login_bg.jpg) no-repeat; width:602px; height:336px; overflow:hidden; position:absolute; left:50%; top:50%; margin-left:-301px; margin-top:-208px;}
 	.login_iptbox{bottom:90px;_bottom:72px;color:#FFFFFF;font-size:12px;height:30px;left:50%;
 margin-left:-280px;position:absolute;width:560px; overflow:visible;}
 	.login_iptbox .ipt{height:24px; width:110px; margin-right:22px; color:#fff; background:url(<?php echo IMG_PATH?>admin_img/ipt_bg.jpg) repeat-x; *line-height:24px; border:none; color:#000; overflow:hidden;}
