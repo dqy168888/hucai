@@ -48,17 +48,6 @@
       'wap' => '手机门户',
       'yp' => '黄页模板',
     ),
-    'templates|default|vote' => 
-    array (
-      'index.html' => '',
-      'list_new.html' => '列表页',
-      'show.html' => '展示页',
-      'submit.html' => '投票页',
-      'vote_result.html' => '投票结果页',
-      'vote_tp.html' => '单独显示页',
-      'vote_tp_2.html' => '新闻页投票模版',
-      'vote_tp_3.html' => '首页投票模版',
-    ),
     'templates|default|link' => 
     array (
       'index.html' => '',
@@ -111,16 +100,6 @@
       'payment_cofirm.html' => '支付确认页模板',
       'spend_list.html' => '消费记录页模板',
     ),
-    'templates|default|message' => 
-    array (
-      'group.html' => '系统消息',
-      'inbox.html' => '收件箱',
-      'outbox.html' => '发件箱',
-      'read.html' => '短消息查看',
-      'read_group.html' => '系统消息查看',
-      'read_only.html' => '已经发消息',
-      'send.html' => '写消息',
-    ),
     'templates|default|member' => 
     array (
       'account_manage.html' => '会员管理',
@@ -162,10 +141,6 @@
       'show.html' => '表单详情页模板',
       'show_js.html' => '表单js调用模板',
     ),
-    'templates|default|mood' => 
-    array (
-      'index.html' => '新闻心情',
-    ),
     'templates|default|yp' => 
     array (
       'com_default' => '企业默认模板',
@@ -181,11 +156,6 @@
     array (
       'index.html' => '公司首页模板',
       'style' => '样式文件夹',
-    ),
-    'templates|default|comment' => 
-    array (
-      'show_list.html' => '内容页评论列表',
-      'list.html' => '评论列表',
     ),
   ),
 );?>

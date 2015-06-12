@@ -316,20 +316,6 @@ return array (
     'installdate' => '2015-04-13',
     'updatedate' => '2015-04-13',
   ),
-  'comment' => 
-  array (
-    'module' => 'comment',
-    'name' => '评论',
-    'url' => 'comment/',
-    'iscore' => '0',
-    'version' => '1.0',
-    'description' => '评论',
-    'setting' => '',
-    'listorder' => '0',
-    'disabled' => '0',
-    'installdate' => '2015-04-13',
-    'updatedate' => '2015-04-13',
-  ),
   'link' => 
   array (
     'module' => 'link',
@@ -349,58 +335,6 @@ return array (
     'disabled' => '0',
     'installdate' => '2010-09-06',
     'updatedate' => '2010-09-06',
-  ),
-  'vote' => 
-  array (
-    'module' => 'vote',
-    'name' => '投票',
-    'url' => '',
-    'iscore' => '0',
-    'version' => '1.0',
-    'description' => '',
-    'setting' => 'array (
-  1 => 
-  array (
-    \'default_style\' => \'default\',
-    \'vote_tp_template\' => \'vote_tp\',
-    \'allowguest\' => \'1\',
-    \'enabled\' => \'1\',
-    \'interval\' => \'1\',
-    \'credit\' => \'1\',
-  ),
-)',
-    'listorder' => '0',
-    'disabled' => '0',
-    'installdate' => '2010-09-06',
-    'updatedate' => '2010-09-06',
-  ),
-  'message' => 
-  array (
-    'module' => 'message',
-    'name' => '短消息',
-    'url' => '',
-    'iscore' => '0',
-    'version' => '1.0',
-    'description' => '',
-    'setting' => '',
-    'listorder' => '0',
-    'disabled' => '0',
-    'installdate' => '2010-09-06',
-    'updatedate' => '2010-09-06',
-  ),
-  'mood' => 
-  array (
-    'module' => 'mood',
-    'name' => '新闻心情',
-    'url' => 'mood/',
-    'iscore' => '0',
-    'version' => '1.0',
-    'description' => '新闻心情',
-    'setting' => '',
-    'listorder' => '0',
-    'disabled' => '0',
-    'installdate' => '2015-04-13',
-    'updatedate' => '2015-04-13',
   ),
   'poster' => 
   array (
@@ -476,20 +410,6 @@ return array (
     'disabled' => '0',
     'installdate' => '2015-04-13',
     'updatedate' => '2015-04-13',
-  ),
-  'sms' => 
-  array (
-    'module' => 'sms',
-    'name' => '短信平台',
-    'url' => 'sms/',
-    'iscore' => '0',
-    'version' => '1.0',
-    'description' => '短信平台',
-    'setting' => '',
-    'listorder' => '0',
-    'disabled' => '0',
-    'installdate' => '2011-09-02',
-    'updatedate' => '2011-09-02',
   ),
 );
 ?>

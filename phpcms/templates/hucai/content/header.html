@@ -30,7 +30,7 @@
 <div class="navi">
   <div class="nav">
     <ul>
-      {pc:content action="category" catid="0" num="25" siteid="$siteid" order="listorder ASC"}
+      {pc:content action="category" catid="0" num="6" siteid="$siteid" order="listorder ASC"}
       <li class="first"><a href="#"><i>我想</i></a></li>
       {loop $data $r}
       <li><a href="{$r[url]}" class="n">{$r[catname]}</a></li>
@@ -49,7 +49,7 @@
   </div>
   <div class="openNav">
     <div class="openNavi"></div>
-    {pc:content action="category" catid="0" num="25" siteid="$siteid" order="listorder ASC"}
+    {pc:content action="category" catid="0" num="6" siteid="$siteid" order="listorder ASC"}
     {loop $data $r}
     {pc:content action="category" catid="$r[catid]" num="25" siteid="$siteid" order="listorder ASC"}
     <div class="openNavi" {if !$data} style="display:none;"{/if}>

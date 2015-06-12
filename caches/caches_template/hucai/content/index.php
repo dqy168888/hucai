@@ -8,7 +8,7 @@
   <div class="p1">
     <div class="indexNews"> <span>新闻</span>
       <div class="newsDemo">
-      <?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"content\" data=\"op=content&tag_md5=351ff98a728399744b438e2d3187c0a0&action=position&posid=9&order=id&num=10\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">编辑</a>";}$content_tag = pc_base::load_app_class("content_tag", "content");if (method_exists($content_tag, 'position')) {$data = $content_tag->position(array('posid'=>'9','order'=>'id','limit'=>'10',));}?>
+      <?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"content\" data=\"op=content&tag_md5=9dfe6cdb0280164f7be60f54edad2518&action=position&posid=5&order=id&num=10\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">编辑</a>";}$content_tag = pc_base::load_app_class("content_tag", "content");if (method_exists($content_tag, 'position')) {$data = $content_tag->position(array('posid'=>'5','order'=>'id','limit'=>'10',));}?>
         <ul>
         	<?php $n=1; if(is_array($data)) foreach($data AS $k => $v) { ?>
           <li><a href="<?php echo $v['url'];?>"><?php echo $v['title'];?></a></li>
@@ -55,7 +55,7 @@ $(".indexNews").hover(function(){
 </script> 
     </div>
     <div class="p2">
-    <?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"content\" data=\"op=content&tag_md5=7a7a0e753182bcf4d42b038435e627ed&action=position&posid=2&order=listorder+DESC&num=3\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">编辑</a>";}$content_tag = pc_base::load_app_class("content_tag", "content");if (method_exists($content_tag, 'position')) {$data = $content_tag->position(array('posid'=>'2','order'=>'listorder DESC','limit'=>'3',));}?>
+    <?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"content\" data=\"op=content&tag_md5=e293260bb058dbf36da3301de91f1839&action=position&posid=1&order=listorder+DESC&num=3\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">编辑</a>";}$content_tag = pc_base::load_app_class("content_tag", "content");if (method_exists($content_tag, 'position')) {$data = $content_tag->position(array('posid'=>'1','order'=>'listorder DESC','limit'=>'3',));}?>
       <ul>
       <?php $n=1;if(is_array($data)) foreach($data AS $r) { ?>
         <li>
@@ -120,7 +120,7 @@ function setVol(num){
     
   </div>
   <div class="p2">
-    <?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"content\" data=\"op=content&tag_md5=e293260bb058dbf36da3301de91f1839&action=position&posid=1&order=listorder+DESC&num=3\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">编辑</a>";}$content_tag = pc_base::load_app_class("content_tag", "content");if (method_exists($content_tag, 'position')) {$data = $content_tag->position(array('posid'=>'1','order'=>'listorder DESC','limit'=>'3',));}?>
+    <?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"content\" data=\"op=content&tag_md5=7a7a0e753182bcf4d42b038435e627ed&action=position&posid=2&order=listorder+DESC&num=3\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">编辑</a>";}$content_tag = pc_base::load_app_class("content_tag", "content");if (method_exists($content_tag, 'position')) {$data = $content_tag->position(array('posid'=>'2','order'=>'listorder DESC','limit'=>'3',));}?>
       <ul>
       <?php $n=1;if(is_array($data)) foreach($data AS $r) { ?>
         <li>
@@ -137,16 +137,19 @@ function setVol(num){
     <div class="p4">
       <ul>
         <li>
+        <?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"content\" data=\"op=content&tag_md5=2f8e628a51fed984bb0fc86e3bafd8b4&action=position&posid=9&order=listorder+DESC&num=1\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">编辑</a>";}$content_tag = pc_base::load_app_class("content_tag", "content");if (method_exists($content_tag, 'position')) {$data = $content_tag->position(array('posid'=>'9','order'=>'listorder DESC','limit'=>'1',));}?>
           <div class="a1"><b><i>虎彩介绍</i></b>
+          <?php $n=1;if(is_array($data)) foreach($data AS $r) { ?>
             <div class="a2">
-              <div class="a3"><img src="<?php echo IMG_PATH;?>hucai/bg/3.jpg" /><span>虎彩印艺股份有限公司成立于1988年，是一家以包装产品的开发、设计、印刷为核心的高新技术企业，中国最优秀的高端奢侈品纸包装供应商，名列中国印刷百强第九名。</span></div>
-              <a href="#" class="more">查看更多</a></div>
+              <div class="a3"><img src="<?php echo thumb($r[thumb],320,120);?>" /><span><?php echo str_cut($r[description],230);?></span></div>
+              <a href="<?php echo $r['url'];?>" class="more"  title="<?php echo $r['title'];?>">查看更多</a></div><?php $n++;}unset($n); ?>
           </div>
+          <?php if(defined('IN_ADMIN') && !defined('HTML')) {echo '</div>';}?>
         </li>
         <li>
           <div class="a1"><b><i>新闻中心</i></b>
             <div class="a2">
-            <?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"content\" data=\"op=content&tag_md5=e293260bb058dbf36da3301de91f1839&action=position&posid=1&order=listorder+DESC&num=3\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">编辑</a>";}$content_tag = pc_base::load_app_class("content_tag", "content");if (method_exists($content_tag, 'position')) {$data = $content_tag->position(array('posid'=>'1','order'=>'listorder DESC','limit'=>'3',));}?>
+            <?php if(defined('IN_ADMIN')  && !defined('HTML')) {echo "<div class=\"admin_piao\" pc_action=\"content\" data=\"op=content&tag_md5=7d25d783e3ab7b8d0090a04c3b8faeae&action=position&posid=1&order=listorder+DESC&num=5\"><a href=\"javascript:void(0)\" class=\"admin_piao_edit\">编辑</a>";}$content_tag = pc_base::load_app_class("content_tag", "content");if (method_exists($content_tag, 'position')) {$data = $content_tag->position(array('posid'=>'1','order'=>'listorder DESC','limit'=>'5',));}?>
               <dl class="newsCenter">
               <?php $n=1;if(is_array($data)) foreach($data AS $r) { ?>
                 <dd> <a href="<?php echo $r['url'];?>" title="<?php echo $r['title'];?>"><i><?php echo str_cut($r[title],36,'');?></i>

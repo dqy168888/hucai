@@ -8,7 +8,7 @@
   <div class="p1">
     <div class="indexNews"> <span>新闻</span>
       <div class="newsDemo">
-      {pc:content  action="position" posid="9" order="id" num="10"}
+      {pc:content  action="position" posid="5" order="id" num="10"}
         <ul>
         	{loop $data $k $v}
           <li><a href="{$v[url]}">{$v[title]}</a></li>
@@ -55,7 +55,7 @@ $(".indexNews").hover(function(){
 </script> 
     </div>
     <div class="p2">
-    {pc:content  action="position" posid="2" order="listorder DESC" num="3"}
+    {pc:content  action="position" posid="1" order="listorder DESC" num="3"}
       <ul>
       {loop $data $r}
         <li>
@@ -120,7 +120,7 @@ function setVol(num){
     
   </div>
   <div class="p2">
-    {pc:content  action="position" posid="1" order="listorder DESC" num="3"}
+    {pc:content  action="position" posid="2" order="listorder DESC" num="3"}
       <ul>
       {loop $data $r}
         <li>
@@ -137,11 +137,14 @@ function setVol(num){
     <div class="p4">
       <ul>
         <li>
+        {pc:content  action="position" posid="9" order="listorder DESC" num="1"}
           <div class="a1"><b><i>虎彩介绍</i></b>
+          {loop $data $r}
             <div class="a2">
-              <div class="a3"><img src="{IMG_PATH}hucai/bg/3.jpg" /><span>虎彩印艺股份有限公司成立于1988年，是一家以包装产品的开发、设计、印刷为核心的高新技术企业，中国最优秀的高端奢侈品纸包装供应商，名列中国印刷百强第九名。</span></div>
-              <a href="#" class="more">查看更多</a></div>
+              <div class="a3"><img src="{thumb($r[thumb],320,120)}" /><span>{str_cut($r[description],230)}</span></div>
+              <a href="{$r[url]}" class="more"  title="{$r[title]}">查看更多</a></div>{/loop}
           </div>
+          {/pc}
         </li>
         <li>
           <div class="a1"><b><i>新闻中心</i></b>

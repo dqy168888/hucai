@@ -492,6 +492,7 @@ $LANG['input_linkurl'] = '请输入链接地址';
 $LANG['page_templates'] = '单网页模板';
 $LANG['edit_following_operation'] = '不要忘记进行栏目缓存更新哟';
 $LANG['ismenu'] = '是否在导航显示';
+$LANG['ishelp'] = '是否在帮助导航显示';
 $LANG['manage_sub_category'] = '管理子栏目';
 
 //model field
