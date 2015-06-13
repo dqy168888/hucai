@@ -1,0 +1,23 @@
+{template "content","header"}
+ <div class="nybg">
+    <div class="sidebarbg">
+    <div class="sidebar solu">
+      <h2 class="title">解决方案</h2>
+        {pc:content action="lists" catid="$catid" num="4" order="id DESC" }
+      <ul>
+ 	{loop $data $r}
+        <li><a href="{$r['url']}"><ins></ins>{$r[title]}</a></li>
+        {/loop}
+      </ul>
+      {/pc}
+    </div></div>
+    <div class="nymain">
+       
+       <div class="solutions_info">
+       	<h2 class="th">{$title}</h2>
+        {$content}
+       </div>
+       
+    </div>
+  </div>
+{template "content","footer"}
