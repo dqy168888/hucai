@@ -1,0 +1,31 @@
+{template "content","header"}
+<div class="nybg">
+    <div class="custom">
+        <?php
+            $is_end = (int)$_GET['is_end'];
+            $current_date = date('Y-m-d');
+            $where = 'where b.date_end ' . ($is_end ? '<' : '>=') . '\'' . $current_date . '\'';
+        ?>
+        <h2 class="title">
+            <span class="way">您现在的位置：首页 &gt; {catpos($catid, '')} </span>
+            线上定制
+        </h2>
+        <div class="cont">
+            <ul>
+                {pc:content action="lists" catid="$catid" num="25" order="id ASC" page="$page" moreinfo="1"}
+                {loop $data $r}
+                <li>
+                    <div class="cpic"><img src="{$r[thumb]}" /></div>
+                    <div class="ctext">
+                        <p class="cp1">{$r[title]}</p>
+                        <p class="cp2">{$r[description]}</p>
+                        <p class="cp3"><a href="{$r[visite_link]}" target="_blank">立即访问 &gt; </a>
+                    </div>
+                </li>
+                {/loop}
+                {/pc}
+            </ul>
+        </div>
+    </div>
+</div>
+{template "content","footer"}

@@ -1,0 +1,34 @@
+{template "content","header"}
+<div class="nybg">
+    <div class="brands">
+        <?php
+            $is_end = (int)$_GET['is_end'];
+            $current_date = date('Y-m-d');
+            $where = 'where b.date_end ' . ($is_end ? '<' : '>=') . '\'' . $current_date . '\'';
+        ?>
+        <h2 class="title">
+            <span class="way">您现在的位置：首页 &gt; {catpos($catid, '')} </span>
+            <span class="hd">
+                <a<?php echo !$is_end ? ' class="select"' : ''; ?> href="/brand-activity-0.html">进行中的活动</a>
+                <a<?php echo $is_end ? ' class="select"' : ''; ?> href="/brand-activity-1.html">已结束活动</a>
+            </span>
+        </h2>
+        <div class="cont">
+            <ul>
+                {pc:get sql="select a.title,a.thumb,a.description,a.url,b.date_start,b.date_end from hc_brand_activity a left join hc_brand_activity_data b on a.id = b.id $where" cache="3600" page="$page" return="data" num="8"}
+                {loop $data $val}
+                <li>
+                    <a href="{$val['url']}"><img src="{$val['thumb']}" /></a>
+                    <p class="bp1"><a href="{$val['url']}">{$val['title']}</a></p>
+                    <p class="bp2">{$val['description']}</p>
+                    <p class="bp3"><i>活动时间：</i>{$val['date_start']}-{$val['date_end']}</p>
+                </li>
+                {/loop}
+                {/pc}
+            </ul>
+            <div class="clear"></div>
+            {$pages}
+        </div>
+    </div>
+</div>
+{template "content","footer"}

@@ -1,0 +1,64 @@
+{template "content","header"}
+<div class="nybg" style="clear:both;">
+     <div class="nymain" style="width:100%;">
+     		<div class="news_title">
+               <h2>{$title}</h2>
+               <p>来源：{$copyfrom} &nbsp;&nbsp; 作者：admin &nbsp;&nbsp;  时间：{$inputtime}  &nbsp;&nbsp;  点击：<span id="hits"></span>次</p>
+             </div>
+             
+            <div class="news_text">{$content}</div>
+            
+            <div class="news_fx">
+            	<div class="fx_top">
+                <div class="fx2">
+					<img src="http://v.t.qq.com/share/images/s/weiboicon16.png" style="padding-bottom:3px;" onclick="postToWb();" class="cu" title="分享到腾讯微博"/><script type="text/javascript">
+				function postToWb(){
+					var _t = encodeURI(document.title);
+					var _url = encodeURIComponent(document.location);
+					var _appkey = encodeURI("cba3558104094dbaa4148d8caa436a0b");
+					var _pic = encodeURI('{$thumb}');
+					var _site = '';
+					var _u = 'http://v.t.qq.com/share/share.php?url='+_url+'&appkey='+_appkey+'&site='+_site+'&pic='+_pic+'&title='+_t;
+					window.open( _u,'', 'width=700, height=680, top=0, left=0, toolbar=no, menubar=no, scrollbars=no, location=yes, resizable=no, status=no' );
+				}
+			</script>
+			          <script type="text/javascript">document.write('<a href="http://v.t.sina.com.cn/share/share.php?url='+encodeURIComponent(location.href)+'&appkey=3172366919&title='+encodeURIComponent('{new_addslashes($title)}')+'" title="分享到新浪微博" class="t1" target="_blank">&nbsp;</a>');</script>
+					  <script type="text/javascript">document.write('<a href="http://www.douban.com/recommend/?url='+encodeURIComponent(location.href)+'&title='+encodeURIComponent('{new_addslashes($title)}')+'" title="分享到豆瓣" class="t2" target="_blank">&nbsp;</a>');</script>
+					  <script type="text/javascript">document.write('<a href="http://share.renren.com/share/buttonshare.do?link='+encodeURIComponent(location.href)+'&title='+encodeURIComponent('{new_addslashes($title)}')+'" title="分享到人人" class="t3" target="_blank">&nbsp;</a>');</script>
+					  <script type="text/javascript">document.write('<a href="http://www.kaixin001.com/repaste/share.php?rtitle='+encodeURIComponent('{new_addslashes($title)}')+'&rurl='+encodeURIComponent(location.href)+'&rcontent=" title="分享到开心网" class="t4" target="_blank">&nbsp;</a>');</script>
+					  <script type="text/javascript">document.write('<a href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url='+encodeURIComponent(location.href)+'" title="分享到QQ空间" class="t5" target="_blank">&nbsp;</a>');</script>
+                </div>
+                <div class="fx1">
+	                <span class="s2"></span>
+	                <span class="s1">标签：
+	                	{loop $keywords $keyword}
+		                <a href="{APP_PATH}index.php?m=content&c=tag&catid={$catid}&tag={urlencode($keyword)}">{$keyword}</a>
+		                {/loop}
+	                </span>
+                </div>
+                </div>
+                
+                <div class="fx_bot">
+                      <div class="fx2">
+                        	<p><a class="next" href="{$next_page[url]}">下一篇&gt;</a></p>
+                            <p><a href="{$next_page[url]}">{$next_page[title]}</a></p>
+                        </div>
+                        
+                		<div class="fx1">
+                        	<p><a class="prev" href="{$previous_page[url]}">&lt;上一篇</a></p>
+                            <p><a href="{$previous_page[url]}">{$previous_page[title]}</a></p>
+                        </div>
+                        
+                        
+                </div>
+                
+                
+            </div>
+            
+     </div>
+    
+     
+    
+  </div>
+  <script language="JavaScript" src="{APP_PATH}api.php?op=count&id={$id}&modelid={$modelid}"></script>
+{template "content","footer"}
