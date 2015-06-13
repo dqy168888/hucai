@@ -3,7 +3,8 @@
   <div class="sidebarbg">
     <div class="sidebar">
       <h2 class="title">新闻中心</h2>
-      {pc:content action="category" catid="2" num="5" siteid="$siteid" order="listorder ASC"}
+      {pc:get sql="SELECT * FROM hc_category  WHERE parentid=$catid AND siteid=$siteid" return="data"}
+      
       <ul style="padding-bottom:46px;">
       {loop $data $r}
         <li><a href="{$r[url]}"><ins></ins>{$r[catname]}</a></li>
@@ -11,26 +12,21 @@
       </ul>
       {/pc}
     </div>
-    <div class="wz"><a href="#"><img src="images/news_03.jpg" alt="虎彩文摘" /></a></div>
+    <div class="wz"><a href="#"><img src="/statics/images/hucai/images/news_03.jpg" alt="虎彩文摘" /></a></div>
     </div>
     
     <div class="news_scroll">
   <div id="home_slider" class="flexslider block_home_slider">
     <div class="flex-viewport">
+    {pc:content  action="position" posid="18" order="listorder DESC" num="4"}
       <ul class="slides">
-        <li><a href="#"><img src="images/s1.jpg" /><img src="images/ns1.jpg" class="other" /></a>
-        	 <span class="shadow"><a target="_blank" href="#">关于进一关于开展“迎接挑战、学质</a></span>
+      {loop $data $key $val}
+        <li><a href="{$val['url']}"><img src="{$val['thumb']}" /><img src="$val['thumb']}" class="other" /></a>
+        	 <span class="shadow"><a target="_blank" href="{$val['url']}">{$val['title']}</a></span>
         </li>
-        <li><a href="#"><img src="images/s1.jpg" /><img src="images/ns1.jpg" class="other" /></a>
-        <span class="shadow"><a target="_blank" href="#">关于进一关于开展“迎接挑战、学质</a></span>
-        </li>
-        <li><a href="#"><img src="images/s1.jpg" /><img src="images/ns1.jpg" class="other" /></a>
-        <span class="shadow"><a target="_blank" href="#">关于进一关于开展“迎接挑战、学质</a></span>
-        </li>
-        <li><a href="#"><img src="images/s1.jpg" /><img src="images/ns1.jpg" class="other" /></a>
-        <span class="shadow"><a target="_blank" href="#">关于进一关于开展“迎接挑战、学质</a></span>
-        </li>
+        {/loop}
       </ul>
+      {/pc}
       <script type="text/javascript">
 $(function () {
 	$('#home_slider').flexslider({
@@ -57,29 +53,26 @@ $(function () {
     		<div class="news_one">
             		<div class="titlebg"><div class="title">虎彩新闻</div></div>
                     <div class="n_left">
+                    		{pc:content  action="position" posid="19" order="listorder DESC" num="2"}
                     		<ul>
-                            	<li><a href="#"><img src="images/news_11.jpg" /></a>
-                                	<h3 class="t"><a href="#">绍兴虎彩印刷公司组织召开了全市高新技术企业座谈会</a></h3>
-                                    <p>为了把握当前经济形势，帮助企业解决经营困难，营造良好的发展环境，浙江省绍兴市政府在全市开展了企业大走访大调研活动，于6月22日在绍兴虎彩印刷......</p>
+                    		{loop $data $key $val}
+                            	<li><a href="{$val['url']}"><img src="{$val['thumb']}" /></a>
+                                	<h3 class="t"><a href="#">{$val['title']}</a></h3>
+                                    <p>{$val[description]}</p>
                                 </li>
+                                {/loop}
                                 
-                                <li><a href="#"><img src="images/news_14.jpg" /></a>
-                                	<h3 class="t"><a href="#">华南国际印刷展/中国国际标签展</a></h3>
-                                    <p>本届展会得到了省政府有关部门的大力支持，不仅在展会定位、服务方面给予指导和意见，同时，在展会同期也举办了一系列精彩活动，值得一提的是......</p>
-                                </li>
                             </ul>
+                            {/pc}
                     </div>
                     <div class="n_right">
+                     {pc:content  action="lists" catid="8" order="listorder ASC" thumb="1" num="8"}
                     	 <ul>
-                            <li><span class="date">[2015-05-10]</span><a href="#">虎彩数字印刷业务覆盖华北华东华南</a></li>
-                            <li><span class="date">[2015-05-10]</span><a href="#">来自虎彩按需服务推广会上的声音</a></li>
-                            <li><span class="date">[2015-05-10]</span><a href="#">虎彩影印联合时光小屋推移动个性印品服务</a></li>
-                            <li><span class="date">[2015-05-10]</span><a href="#">中国外文局与虎彩集团举行战略合作签约仪式(图)</a></li>
-                            <li><span class="date">[2015-05-10]</span><a href="#">中国外文局签约虎彩印艺拓展按需印刷市场</a></li>
-                            <li><span class="date">[2015-05-10]</span><a href="#">虎彩数字印刷业务覆盖华北华东华南</a></li>
-                            <li><span class="date">[2015-05-10]</span><a href="#">来自虎彩按需服务推广会上的声音</a></li>
-                            <li><span class="date">[2015-05-10]</span><a href="#">虎彩影印联合时光小屋推移动个性印品服务</a></li>                    </ul>
-                    
+                    	 {loop $data $key $val}
+                            <li><span class="date">{date('Y-m-d H:i:s',$val['inputtime'])}</span><a href="{{$val['url']}}">{$val['title']}</a></li>
+                    	{/loop}
+                    </ul>
+                    {/pc}
                     </div>
             </div>
           <div class="clear"></div>

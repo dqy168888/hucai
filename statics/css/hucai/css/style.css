@@ -442,7 +442,7 @@ dl.icon1 dd a i{color:#333333; font-family:"微软雅黑"; font-size:14px; displ
 .news_scroll .slides li .shadow{ width:100%; position:absolute; bottom:0; right:0; z-index:10; height:40px; line-height:40px; background:rgba(0,0,0,0.6); text-align:left; text-indent:10px; }
 .news_scroll .slides li .shadow a{ color:#fff; text-indent:10px; }
 .news_scroll .block_home_slider .flex-control-paging{ z-index:20; bottom:15px; width:auto; float:right; right:10px; left:auto;}
-.news_scroll .block_home_slider .flex-control-paging li a{ background-image:url(../../images/ppbg.png); }
+.news_scroll .block_home_slider .flex-control-paging li a{ background-image:url(/statics/images/hucai/images/ppbg.png); }
 
 
 .scroll{/*width:960px; height:290px;*/  width:100%;  float:left; }
