@@ -78,6 +78,7 @@ $(function () {
           <div class="clear"></div>
           <div class="news_two">
             		<div class="titlebg"><div class="title">产品动态</div></div>
+<<<<<<< HEAD
 				    <ul><li><a href="#"><img src="images/news_16.jpg" /><p>虎彩携6大出版商进军按需印刷</p></a></li>
                     <li><a href="#"><img src="images/news_18.jpg" /><p>广东新闻出版广电局领导调研东莞虎彩印刷</p></a></li>
                     <li><a href="#"><img src="images/news_20.jpg" /><p>陈成稳：成功要素——梦想，胸怀，坚持</p></a></li>
@@ -114,6 +115,41 @@ $(function () {
                             <li><span class="date">[2015-05-10]</span><a href="#">中国外文局与虎彩集团举行战略合作签约仪式(图)</a></li>
                             <li><span class="date">[2015-05-10]</span><a href="#">中国外文局签约虎彩印艺拓展按需印刷市场</a></li>
                                          </ul>
+=======
+            		   {pc:content  action="lists" catid="9" order="listorder ASC" thumb="1" num="4"}
+				    <ul>
+				     {loop $data $key $val}
+				    <li><a href="{$val[url]}"><img src="{$val[thumb]}" /><p>{$val[title]}</p></a></li>
+					{/loop}
+					</ul>
+					{/pc}
+
+            </div>
+           <div class="clear"></div>
+           <div class="news_three">
+            		<div class="titlebg"><div class="title">行业洞察</div></div>
+                    <div class="n_top">
+                     {pc:content  action="lists" catid="7" order="listorder DESC"  num="2"}
+                    		<ul>
+                    		{loop $data $key $val}
+                            	<li><a href="{$val[url]}"><img style='width:200px;height:130px' src="{$val[thumb]}" /></a>
+                                	<h3 class="t"><a href="#">{$val[title]}</a></h3>
+                                    <p>{$val[description]}</p>
+                                    <p><a href="{$val[url]}">[详细]</a></p>
+                                </li>
+							{/loop}
+                            </ul>
+                     {/pc}
+                    </div>
+                    <div class="n_bot">
+                     {pc:get sql="select * from hc_news where catid=7 ORDER BY id DESC" start=2}
+                    	 <ul>
+                    	 {loop $data $key $val}
+                            <li><span class="date">{date('Y-m-d H:i:s',$val['inputtime'])}</span><a href="{$val[url]}">{$val[title]}</a></li>
+                         {/loop}
+                         </ul>
+                     {/pc}
+>>>>>>> branch 'master' of https://github.com/rexlin0624/hucai.git
                     
                     </div>
             </div> 
