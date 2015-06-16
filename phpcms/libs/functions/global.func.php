@@ -683,35 +683,35 @@ function pages($num, $curr_page, $perpage = 20, $urlrule = '', $array = array(),
 			}
 			$more = 1;
 		}
-		$multipage .= '<a class="a1">'.$num.L('page_item').'</a>';
 		if($curr_page>0) {
-			$multipage .= ' <a href="'.pageurl($urlrule, $curr_page-1, $array).'" class="a1">'.L('previous').'</a>';
+			$multipage .= '<a href="'.pageurl($urlrule, $curr_page-1, $array).'" class="a1">'.L('previous').'</a>';
 			if($curr_page==1) {
-				$multipage .= ' <span>1</span>';
+				$multipage .= '<a class="select">1</a>';
 			} elseif($curr_page>6 && $more) {
-				$multipage .= ' <a href="'.pageurl($urlrule, 1, $array).'">1</a>..';
+				$multipage .= '<a href="'.pageurl($urlrule, 1, $array).'">1</a>..';
 			} else {
-				$multipage .= ' <a href="'.pageurl($urlrule, 1, $array).'">1</a>';
+				$multipage .= '<a href="'.pageurl($urlrule, 1, $array).'">1</a>';
 			}
 		}
 		for($i = $from; $i <= $to; $i++) {
 			if($i != $curr_page) {
-				$multipage .= ' <a href="'.pageurl($urlrule, $i, $array).'">'.$i.'</a>';
+				$multipage .= '<a href="'.pageurl($urlrule, $i, $array).'">'.$i.'</a>';
 			} else {
-				$multipage .= ' <span>'.$i.'</span>';
+				$multipage .= '<a class="select">'.$i.'</a>';
 			}
 		}
 		if($curr_page<$pages) {
 			if($curr_page<$pages-5 && $more) {
-				$multipage .= ' ..<a href="'.pageurl($urlrule, $pages, $array).'">'.$pages.'</a> <a href="'.pageurl($urlrule, $curr_page+1, $array).'" class="a1">'.L('next').'</a>';
+				$multipage .= '..<a href="'.pageurl($urlrule, $pages, $array).'">'.$pages.'</a> <a href="'.pageurl($urlrule, $curr_page+1, $array).'" class="a1">'.L('next').'</a>';
 			} else {
-				$multipage .= ' <a href="'.pageurl($urlrule, $pages, $array).'">'.$pages.'</a> <a href="'.pageurl($urlrule, $curr_page+1, $array).'" class="a1">'.L('next').'</a>';
+				$multipage .= '<a href="'.pageurl($urlrule, $pages, $array).'">'.$pages.'</a> <a href="'.pageurl($urlrule, $curr_page+1, $array).'" class="a1">'.L('next').'</a>';
 			}
 		} elseif($curr_page==$pages) {
-			$multipage .= ' <span>'.$pages.'</span> <a href="'.pageurl($urlrule, $curr_page, $array).'" class="a1">'.L('next').'</a>';
+			$multipage .= '<a class="select">'.$pages.'</a> <a href="'.pageurl($urlrule, $curr_page, $array).'" class="a1">'.L('next').'</a>';
 		} else {
-			$multipage .= ' <a href="'.pageurl($urlrule, $pages, $array).'">'.$pages.'</a> <a href="'.pageurl($urlrule, $curr_page+1, $array).'" class="a1">'.L('next').'</a>';
+			$multipage .= '<a href="'.pageurl($urlrule, $pages, $array).'">'.$pages.'</a> <a href="'.pageurl($urlrule, $curr_page+1, $array).'" class="a1">'.L('next').'</a>';
 		}
+		$multipage .= '&nbsp;&nbsp;&nbsp;&nbsp;共'.$pages.'页';
 	}
 	return $multipage;
 }

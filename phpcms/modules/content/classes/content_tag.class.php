@@ -230,7 +230,30 @@ class content_tag {
 		$order = $data['order'];
 		$thumb = (empty($data['thumb']) || intval($data['thumb']) == 0) ? 0 : 1;
 		$siteid = $GLOBALS['siteid'] ? intval($GLOBALS['siteid']) : 1;
-		$catid = (empty($data['catid']) || $data['catid'] == 0) ? '' : intval($data['catid']);
+		if ($data['catid']) {
+			$catid_tmp = explode(',', $data['catid']);
+			foreach ($catid_tmp as $key=>$cid){
+				$tmp_cid = intval($cid);
+				if($tmp_cid && $key==0) {
+					$siteids = getcache('category_content','commons');
+					if(!$siteids[$tmp_cid]) return false;
+					$siteid = $siteids[$tmp_cid];
+					$this->category = getcache('category_content_'.$siteid,'commons');
+				}
+				if($tmp_cid && $this->category[$tmp_cid]['child']) {
+					$catids_str = $this->category[$tmp_cid]['arrchildid'];
+					$pos = strpos($catids_str,',')+1;
+					$catids_str = substr($catids_str, $pos);
+					$catids_arr[] = $catids_str;
+				}  elseif($tmp_cid && !$this->category[$tmp_cid]['child']) {
+						$catids_arr[] = $tmp_cid;
+				}
+			}
+			$catids = implode(',', $catids_arr);
+			$sql = "`catid` IN ($catids) AND ";
+		}
+		
+		/* $catid = (empty($data['catid']) || $data['catid'] == 0) ? '' : intval($data['catid']);
 		if($catid) {
 			$siteids = getcache('category_content','commons');
 			if(!$siteids[$catid]) return false;
@@ -244,7 +267,7 @@ class content_tag {
 			$sql = "`catid` IN ($catids_str) AND ";
 		}  elseif($catid && !$this->category[$catid]['child']) {
 				$sql = "`catid` = '$catid' AND ";
-		}
+		} */
 		if($thumb) $sql .= "`thumb` = '1' AND ";
 		if(isset($data['where'])) $sql .= $data['where'].' AND ';
 		if(isset($data['expiration']) && $data['expiration']==1) $sql .= '(`expiration` >= \''.SYS_TIME.'\' OR `expiration` = \'0\' ) AND ';

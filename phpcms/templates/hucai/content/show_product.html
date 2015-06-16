@@ -1,0 +1,140 @@
+{template "content","header"}
+<div class="nybg">
+  <div class="products_lb">
+    <h2 class="title">印艺产品分类</h2>
+    {pc:content action="category" catid="1" num="10" siteid="$siteid" order="listorder ASC"}
+    {loop $data $r}
+    {$i++}
+    <div class="list1{if !fmod($i,2)} list2{/if}">
+      <h3 class="t">
+        <a href="{$r[url]}">{$r[catname]}</a>
+      </h3>
+      <p> {pc:content action="category" catid="$r[catid]" num="25" siteid="$siteid" order="listorder ASC"}
+        {loop $data $r1}
+        <a href="{$r1[url]}">{$r1[catname]}</a>
+        {/loop}
+        {/pc} </p>
+    </div>
+    {/loop}
+    {/pc} </div>
+  <div class="nymain">
+    <div class="products_info">
+      <div class="roll2">
+        <div class="enjoy">
+          <div class="big">
+          {loop $images $pic_k $r}
+            <div><img src="{thumb($r[url], 378, 378, 0)}" alt="{$r[alt]}" rel="{$r[url]}"/></div>
+            {/loop}
+          </div>
+        </div>
+        <a class="prev"></a>
+        <a class="next"></a>
+        <div class="small">
+          <ul>
+           {loop $images $pic_k $r}
+             <li><img src="{thumb($r[url], 98, 98, 0)}" alt="{$r[alt]}" rel="{$r[url]}"/></li>
+            {/loop}
+            
+          </ul>
+        </div>
+      </div>
+      <script type="text/javascript">
+
+$(function(){
+	var a = 0;
+	var b =$(".small ul li").size();
+	$(".small ul li a").attr("href","javascript:void:(0)")
+	$(".big div:eq(0)").show();
+	var h = $(".small ul li").height();
+	$(".small ul").height(b*h);
+	$(".small ul li:eq(0) a").addClass("hover");
+	
+	function demo(){
+		if(a<b-1){
+			a++;
+		}else{
+			a = 0;
+		}
+		$(".big div:eq("+a+")").fadeIn(500);
+		$(".big div:eq("+a+")").siblings().fadeOut(500);
+		$(".small ul li:eq("+a+") a").addClass("hover");
+		$(".small ul li:eq("+a+")").siblings().find("a").removeClass("hover");
+		if(a<b-3){
+			$(".small ul").stop().animate({top:-h*a});
+		}
+	}
+	var time  = setInterval(demo,5000);
+	
+	$(".big,.small").hover(function(){
+		clearInterval(time);
+	},function(){
+		time  = setInterval(demo,5000);
+	})
+	
+	$(".small ul li").click(function(){
+		var c = $(this).index();
+		a = $(this).index();
+		$(".big div:eq("+c+")").fadeIn(500);
+		$(".big div:eq("+c+")").siblings().fadeOut(500);
+		$(".small ul li:eq("+c+") a").addClass("hover");
+		$(".small ul li:eq("+c+")").siblings().find("a").removeClass("hover");
+		if(a<b-3){
+		$(".small ul").stop().animate({top:-h*c});
+		}
+	})
+	
+	$(".next").click(function(){
+		demo();
+	})
+	$(".prev").click(function(){
+		if(a>0){
+			if(-a<b-1){
+				a--;
+			}else{
+				a=0;
+			}
+			$(".big div:eq("+a+")").fadeIn(500);
+			$(".big div:eq("+a+")").siblings().fadeOut(500);
+			$(".small ul li:eq("+a+") a").addClass("hover");
+			$(".small ul li:eq("+a+")").siblings().find("a").removeClass("hover");
+			if(a<b-3){
+				$(".small ul").stop().animate({top:-h*a});
+			}
+		}
+	})
+})
+
+</script>
+      <div class="products_text">
+        <h2 class="te1">{$title}</h2>
+        <div class="te2">
+          <p>{$description}</p>
+        </div>
+        <div class="te3"> 分享到 &nbsp;
+          <a href="#"><img src="{IMG_PATH}hucai/news_info_09.jpg" /></a>
+          <a href="#"><img src="{IMG_PATH}hucai/news_info_11.jpg" /></a>
+          <a href="#"><img src="{IMG_PATH}hucai/news_info_13.jpg" /></a>
+          <a href="#"><img src="{IMG_PATH}hucai/news_info_15.jpg" /></a>
+          <a href="#"><img src="{IMG_PATH}hucai/news_info_17.jpg" /></a>
+        </div>
+      </div>
+      <div class="clear"></div>
+      <div class="products_xx">
+        <div class="titlebg">
+          <div class="t">产品介绍</div>
+        </div>
+        <div class="cont">
+          {if $allow_visitor==1}
+				{$content}
+				<!--内容关联投票-->
+				{if $voteid}<script language="javascript" src="{APP_PATH}index.php?m=vote&c=index&a=show&action=js&subjectid={$voteid}&type=2"></script>{/if}
+                
+			{else}
+				<CENTER><a href="{APP_PATH}index.php?m=content&c=readpoint&allow_visitor={$allow_visitor}"><font color="red">阅读此信息需要您支付 <B><I>{$readpoint} {if $paytype}元{else}点{/if}</I></B>，点击这里支付</font></a></CENTER>
+			{/if}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{template "content","footer"}

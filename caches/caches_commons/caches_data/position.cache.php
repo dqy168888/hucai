@@ -1,5 +1,17 @@
 <?php
 return array (
+  20 => 
+  array (
+    'posid' => '20',
+    'modelid' => '12',
+    'catid' => '1',
+    'name' => '产品首页推荐',
+    'maxnum' => '5',
+    'extention' => '',
+    'listorder' => '6',
+    'siteid' => '1',
+    'thumb' => '',
+  ),
   9 => 
   array (
     'posid' => '9',
@@ -57,6 +69,30 @@ return array (
     'maxnum' => '3',
     'extention' => '',
     'listorder' => '1',
+    'siteid' => '0',
+    'thumb' => '',
+  ),
+  18 => 
+  array (
+    'posid' => '18',
+    'modelid' => '1',
+    'catid' => '2',
+    'name' => '新闻页轮播',
+    'maxnum' => '20',
+    'extention' => '',
+    'listorder' => '0',
+    'siteid' => '1',
+    'thumb' => '',
+  ),
+  19 => 
+  array (
+    'posid' => '19',
+    'modelid' => '0',
+    'catid' => '0',
+    'name' => '新闻置顶',
+    'maxnum' => '20',
+    'extention' => '',
+    'listorder' => '0',
     'siteid' => '0',
     'thumb' => '',
   ),

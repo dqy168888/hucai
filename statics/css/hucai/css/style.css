@@ -49,8 +49,8 @@ display: block;
 
 img {
 max-width: 100%;
-height: auto;
-width: auto\9; /* ie8 */
+/*height: auto;
+width: auto\9;*/ /* ie8 */
 }
 .video embed, .video object, .video iframe {
 width: 100%;
@@ -569,7 +569,7 @@ filter:progid:DXImageTransform.Microsoft.gradient( GradientType = 0,startColorst
 .roll #touchScroller1{ width:980px;}
 
 .products{}
-.pflash .flex-control-paging li a{background-image:url(../../images/ppbg.png);}
+.pflash .flex-control-paging li a{background-image:url(../bg/ppbg.png);}
 
 .products .products_showbg{ background:#f1f1f1; overflow:hidden;}
 .products .products_show{ width:1170px; margin:0 auto;}
@@ -592,7 +592,7 @@ filter:progid:DXImageTransform.Microsoft.gradient( GradientType = 0,startColorst
 .products .products_show .products_02{ padding:20px 0 20px;overflow:hidden;}
 .products .products_show .products_02 .pr2{ width:462px;}
 .products .products_show .products_02 .pr2 .s1{ padding-bottom:10px; overflow:hidden; display:block;}
-.products .products_show .products_02 .pr2 .s2{ margin-right:10px;}
+.products .products_show .products_02 .pr2 .s2{ margin-right:5px;}
 .products .products_show .products_02 .pr3{ width:462px; margin-right:0;}
 
 
@@ -643,10 +643,10 @@ filter:progid:DXImageTransform.Microsoft.gradient( GradientType = 0,startColorst
 .roll2 .small ul li{ margin-top:10px;}
 .roll2 .small ul li a {width: 98px;height: 98px; text-align: center;display: block;text-decoration: none; border:1px solid #dedede;}
 .roll2 .small ul li a.hover {background: #000;color: #FFF;}
-.roll2 .prev { height:14px; width:98px; display:block; position:absolute;  right:0; top:0;    cursor:pointer; z-index:110;background:url(../../images/products_prev.jpg) no-repeat center top;}
-.roll2 .next{ height:14px; width:98px; display:block; position:absolute;  right:0; bottom:0;    cursor:pointer; z-index:110;background:url(../../images/products_next.jpg) no-repeat center top;}
-.roll2 .prev:hover{ background:url(../../images/products_prev.jpg) no-repeat center top; height:14px; width:98px;}
-.roll2 .next:hover{ background:url(../../images/products_next.jpg) no-repeat center top; height:14px; width:98px;}
+.roll2 .prev { height:14px; width:98px; display:block; position:absolute;  right:0; top:0;    cursor:pointer; z-index:110;background:url(../bg/products_prev.jpg) no-repeat center top;}
+.roll2 .next{ height:14px; width:98px; display:block; position:absolute;  right:0; bottom:0;    cursor:pointer; z-index:110;background:url(../bg/products_next.jpg) no-repeat center top;}
+.roll2 .prev:hover{ background:url(../bg/products_prev.jpg) no-repeat center top; height:14px; width:98px;}
+.roll2 .next:hover{ background:url(../bg/products_next.jpg) no-repeat center top; height:14px; width:98px;}
 
 
 .nymain .products_info .products_text{ width:420px; float:left; }
@@ -714,8 +714,8 @@ filter:progid:DXImageTransform.Microsoft.gradient( GradientType = 0,startColorst
 .subject .style01 .sodemo li{ width:485px; height:320px;  float:left; margin-right:20px;  position:relative;}
 .subject .style01 .sodemo li a{ display:block; width:485px; height:320px;   }
 .subject .style01 .sodemo li .product_p img{ width:485px;}
-.subject .style01 .prev{ position:absolute; left:20px;  background:url(../../images/subject_prev.png) center center no-repeat; width:35px; height:59px; text-indent:-9999px; cursor:pointer; margin-top:150px;}
-.subject .style01 .next{ position:absolute; right:20px;  background:url(../../images/subject_next.png) center center no-repeat; width:35px; height:59px; text-indent:-9999px; cursor:pointer; margin-top:150px;}
+.subject .style01 .prev{ position:absolute; left:20px;  background:url(../bg/subject_prev.png) center center no-repeat; width:35px; height:59px; text-indent:-9999px; cursor:pointer; margin-top:150px;}
+.subject .style01 .next{ position:absolute; right:20px;  background:url(../bg/subject_next.png) center center no-repeat; width:35px; height:59px; text-indent:-9999px; cursor:pointer; margin-top:150px;}
 
 
 .subject .subject_jb{width:100%; background:#fff; margin-top:50px; }

@@ -1,0 +1,43 @@
+{template "content","header"}
+<div class="nybg">
+  <div class="products_lb">
+    <h2 class="title">印艺产品分类</h2>
+    {pc:content action="category" catid="1" num="10" siteid="$siteid" order="listorder ASC"}
+    {loop $data $r}
+    {$i++}
+    <div class="list1{if !fmod($i,2)} list2{/if}">
+      <h3 class="t">
+        <a href="{$r[url]}">{$r[catname]}</a>
+      </h3>
+      <p>
+      {pc:content action="category" catid="$r[catid]" num="25" siteid="$siteid" order="listorder ASC"}
+       {loop $data $r1}
+        <a href="{$r1[url]}">{$r1[catname]}</a>
+        {/loop}
+       {/pc}
+      </p>
+    </div>
+    {/loop}
+    {/pc}
+    
+  </div>
+  <div class="nymain">
+    <div class="products_pic">
+    {pc:content action="lists" catid="$catid" num="12" order="id DESC" page="$page"}
+      <ul>
+      {loop $data $r}
+        <li>
+          <a href="{$r[url]}" title="{$r[title]}"><img src="{thumb($r[thumb],318,310)}" width="318" height="310" alt="{$r[title]}"/>
+          <p  style="color:{$r[style]}">{str_cut($r[title],28)}</p>
+          </a>
+        </li>
+        {/loop}
+      </ul>
+      <div class="fenye">
+        {$pages}
+        </div>
+        {/pc}
+    </div>
+  </div>
+</div>
+{template "content","footer"}

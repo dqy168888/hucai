@@ -13,7 +13,7 @@ return array (
     'default_style' => 'hucai',
     'template' => 'hucai',
     'setting' => 'array (
-  \'upload_maxsize\' => \'2048\',
+  \'upload_maxsize\' => \'10240\',
   \'upload_allowext\' => \'jpg|jpeg|gif|bmp|png|doc|docx|xls|xlsx|ppt|pptx|pdf|txt|rar|zip|swf\',
   \'watermark_enable\' => \'1\',
   \'watermark_minwidth\' => \'300\',

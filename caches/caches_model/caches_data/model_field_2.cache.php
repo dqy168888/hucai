@@ -115,7 +115,7 @@ return array (
     'setting' => 'array (
   \'upload_allowext\' => \'rar|zip\',
   \'isselectimage\' => \'0\',
-  \'upload_number\' => \'10\',
+  \'upload_number\' => \'1\',
   \'downloadlink\' => \'1\',
   \'downloadtype\' => \'1\',
 )',
@@ -135,7 +135,7 @@ return array (
     'isomnipotent' => '0',
     'upload_allowext' => 'rar|zip',
     'isselectimage' => '0',
-    'upload_number' => '10',
+    'upload_number' => '1',
     'downloadlink' => '1',
     'downloadtype' => '1',
   ),
