@@ -37,6 +37,7 @@
       'list_services_download.html' => '下载中心列表页',
       'message.html' => '消息提示页',
       'page.html' => '单网页',
+       'page-gk.html' => '虎彩概况',
       'rss.html' => 'RSS页',
       'search.html' => '搜索',
       'show.html' => '文章内容页',
