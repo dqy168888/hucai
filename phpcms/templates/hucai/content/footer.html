@@ -1,6 +1,6 @@
 <div class="f1">
   <div class="f2">
-    <div class="footNav"> {pc:get sql="SELECT * FROM hc_category WHERE ishelp = 1 AND ismenu = 1 " num="4" siteid="$siteid"  return="data"}
+    <div class="footNav"> {pc:get sql="SELECT * FROM hc_category WHERE type = 2 AND ismenu = 1 AND parentid = 0 " num="4" siteid="$siteid"  return="data"}
       {loop $data $key $val}
       <dl>
         {pc:content action="category" catid="$val[catid]" num="6" siteid="$siteid" order="listorder ASC"}
@@ -16,7 +16,7 @@
     <div class="share"> <img src="{IMG_PATH}hucai/bg/bg18.gif" />
       <ul>
         <li><a href="#"><img src="{IMG_PATH}hucai/bg/png5.png" /></a></li>
-        <li><a href="#"><img src="{IMG_PATH}hucai/bg/png6.png" /></a></li>
+        <!--<li><a href="#"><img src="{IMG_PATH}hucai/bg/png6.png" /></a></li>-->
         <li><a href="#"><img src="{IMG_PATH}hucai/bg/png7.png" /></a></li>
         <li><a href="#"><img src="{IMG_PATH}hucai/bg/png8.png" /></a></li>
         <li><a href="#"><img src="{IMG_PATH}hucai/bg/png9.png" /></a></li>

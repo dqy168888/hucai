@@ -361,11 +361,11 @@ dl.icon1 dd a i{color:#333333; font-family:"微软雅黑"; font-size:14px; displ
 .nybg .sidebar .title{ font-size:16px; height:50px; line-height:50px;border-bottom:1px solid #f0f0f0; }
 .nybg .sidebar li{ border-bottom:1px solid #f0f0f0}
 .nybg .sidebar li a{ display:block; color:#333; font-size:14px;line-height:50px;}
-.nybg .sidebar li a ins{width:3px; height:10px; margin-top:-5px; margin-right:5px; display:inline-block; background:url(../../images/about_icon.jpg) no-repeat center center;}
+.nybg .sidebar li a ins{width:3px; height:10px; margin-top:-5px; margin-right:5px; display:inline-block; background:url(../bg/about_icon.jpg) no-repeat center center;}
 
-.nybg .sidebar li a:hover ins{  margin-top:-5px; margin-right:5px; display:inline-block; background:url(../../images/about_icon2.jpg) no-repeat center center;}
+.nybg .sidebar li a:hover ins{  margin-top:-5px; margin-right:5px; display:inline-block; background:url(../bg/about_icon2.jpg) no-repeat center center;}
 .nybg .sidebar li a:hover{ color:#0068b7; text-decoration:underline;}
-.nybg .sidebar li a.select ins{  margin-top:-5px; margin-right:5px; display:inline-block; background:url(../../images/about_icon2.jpg) no-repeat center center;}
+.nybg .sidebar li a.select ins{  margin-top:-5px; margin-right:5px; display:inline-block; background:url(../bg/about_icon2.jpg) no-repeat center center;}
 .nybg .sidebar li a.select{ color:#0068b7;}
 
 .nybg .nymain { float:left; width:960px; font-size:14px; line-height:30px;}
@@ -380,8 +380,8 @@ dl.icon1 dd a i{color:#333333; font-family:"微软雅黑"; font-size:14px; displ
 .nybg .nymain .gk .company li a:hover p{ color:#0068b7; text-decoration:underline;}
 
 .nybg .nymain .history{ margin-top:40px; }
-.nybg .nymain .history .hi1bg{ background:url(../../images/about_history_06.jpg) repeat-y 0 0 ;  overflow:hidden;}
-.nybg .nymain .history .hi1{ background:url(../../images/about_history_03.jpg) no-repeat 0 0; overflow:hidden; padding-left:30px;}
+.nybg .nymain .history .hi1bg{ background:url(../bg/about_history_06.jpg) repeat-y 0 0 ;  overflow:hidden;}
+.nybg .nymain .history .hi1{ background:url(../bg/about_history_03.jpg) no-repeat 0 0; overflow:hidden; padding-left:30px;}
 .nybg .nymain .history .hi1 h3.t{ font-size:14px; color:#0068b7; font-weight:bold; margin-top:-10px; border-bottom:1px dashed #dedede; padding-bottom:10px;}
 
 .nybg .nymain .history .hi1 .text{ padding-top:20px; padding-bottom:50px; overflow:hidden;}
@@ -418,8 +418,8 @@ dl.icon1 dd a i{color:#333333; font-family:"微软雅黑"; font-size:14px; displ
 .nybg .nymain .govern .time a.select{ color:#0068b7; padding-right:30px; font-weight:bold; }
 .nybg .nymain .govern .govern_list .date{ float:right; color:#999; font-size:12px;}
 .nybg .nymain .govern .govern_list  li{  border-bottom:1px dashed #ccc; line-height:46px;}
-.nybg .nymain .govern .govern_list  li a{background:url(../../images/zl_03.jpg) no-repeat 5px center; padding-left:20px;}
-.nybg .nymain .govern .govern_list  li a:hover{color:#0068b7;  background:url(../../images/zl_06.jpg) no-repeat 5px center;  }
+.nybg .nymain .govern .govern_list  li a{background:url(../bg/zl_03.jpg) no-repeat 5px center; padding-left:20px;}
+.nybg .nymain .govern .govern_list  li a:hover{color:#0068b7;  background:url(../bg/zl_06.jpg) no-repeat 5px center;  }
  
 .fenye{ text-align:center; margin-top:50px;}
 .fenye a{ padding:5px 10px; border:1px solid #e6e6e6; margin:0 2px;}

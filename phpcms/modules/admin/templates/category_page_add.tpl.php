@@ -55,12 +55,24 @@ include $this->admin_tpl('header');?>
       </tr>
 	<tr>
         <th><?php echo L('catgory_img')?>：</th>
-        <td><?php echo form::images('info[image]', 'image', $image, 'content');?></td>
+        <td><?php echo form::images('info[image]', 'image', $image, 'content');?>图片宽度960px，高度不限</td>
       </tr>
 	<tr>
         <th><?php echo L('description')?>：</th>
         <td>
-		<textarea name="info[description]" maxlength="255" style="width:300px;height:60px;"><?php echo $description;?></textarea>
+		<!-- <textarea name="info[description]" maxlength="255" style="width:300px;height:60px;"><?php echo $description;?></textarea>-->
+		<script type="text/javascript" src="/statics/js/ckeditor/ckeditor.js"></script>
+<textarea name="info[description]" cols="50" rows="8" id="content"><?php echo $description;?></textarea>
+<script type="text/javascript">
+CKEDITOR.replace( 'content',{height:200,width:500,pages:false,subtitle:false,textareaid:'content',module:'',catid:'',
+flashupload:true,alowuploadexts:'',allowbrowser:'1',allowuploadnum:'10',authkey:'c8e07e653e467f2f1b2058ee44db799c',
+filebrowserUploadUrl : '/index.php?m=attachment&c=attachments&a=upload&module=&catid=&dosubmit=1',
+toolbar :
+[
+['Source'],['Bold', 'Italic', '-', 'NumberedList', 'BulletedList', '-', 'Link', 'Unlink' ],['Maximize'], //这是工具列表
+]
+});
+</script>
 		</td>
       </tr>
 <tr>
@@ -69,12 +81,7 @@ include $this->admin_tpl('header');?>
 	  <input type='radio' name='info[ismenu]' value='1' checked> <?php echo L('yes');?>&nbsp;&nbsp;&nbsp;&nbsp;
 	  <input type='radio' name='info[ismenu]' value='0'  > <?php echo L('no');?></td>
     </tr>
-    <tr>
-     <th><?php echo L('ishelp');?>：</th>
-      <td>
-	  <input type='radio' name='info[ishelp]' value='1' > <?php echo L('yes');?>&nbsp;&nbsp;&nbsp;&nbsp;
-	  <input type='radio' name='info[ishelp]' value='0'  checked> <?php echo L('no');?></td>
-    </tr>
+   
 </table>
 
 </div>

@@ -1,0 +1,12 @@
+<div class="sidebarbg">
+    <div class="sidebar">
+      <h2 class="title">关于虎彩</h2>
+      {pc:content action="category" catid="90" num="10" siteid="$siteid" order="listorder ASC"}
+      <ul>
+      {loop $data $r}
+      <li><a href="{$r[url]}" {if $r[catid]==$catid} class="select"{/if}><ins></ins>{$r[catname]}</a></li>
+      {/loop}
+      {/pc}
+        
+      </ul>
+    </div></div>

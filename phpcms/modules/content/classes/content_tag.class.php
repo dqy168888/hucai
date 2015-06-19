@@ -218,6 +218,32 @@ class content_tag {
 		}
 		return $array;
 	}
+	/**
+	 * 广告标签 bywdz
+	 * @param $data
+	 */
+	public function poster($data) {
+		$data['spaceid'] = intval($data['spaceid']);
+		$sdb = pc_base::load_model('poster_model');
+		$now = SYS_TIME;
+		$siteid = $data['siteid'] && intval($data['siteid']) ? intval($data['siteid']) : get_siteid();
+		$where = "`spaceid`='".$data['spaceid']."' AND `disabled`=0 AND `startdate`<='".$now."' ";
+		$pinfo = $sdb->select($where, '*', $data['limit'], '`listorder` ASC, `id` DESC');
+		if (is_array($pinfo) && !empty($pinfo)) {
+			foreach ($pinfo as $k => $rs) {
+				if ($rs['setting']) {
+					$rs['setting'] = string2array($rs['setting']);
+					$pinfo[$k] = $rs;
+				} else {
+					unset($pinfo[$k]);
+				}
+			}
+			extract($r);
+		} else {
+			return true;
+		}
+		return $pinfo;
+	}
 	
 	/**
 	 * 推荐位

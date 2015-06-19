@@ -22,43 +22,45 @@
           <div class="title">高端印品·创新印品</div>
         </div>
         <div class="cont"> 
-        {pc:content  action="position" posid="20" order="listorder ASC" num="1" catid="10,11"}
+        {pc:content action="poster" spaceid="13" num="1" page="1"}
           {loop $data $k $r}
           <div class="pr1">
             <span>
-            <a href="{$r[url]}" title="{$r[title]}"><img src="{thumb($r[thumb],460,380)}" alt="{$r[title]}" width="460" height="380" /></a>
+            
+            <a href="{siteurl($siteid)}/index.php?m=poster&c=index&a=poster_click&siteid={$siteid}&id={$r[id]}" title="{$r[name]}"><img src="{thumb($r[setting][1][imageurl],460,380)}" alt="{$r[name]}" width="460" height="380" /></a>
             </span>
           </div>
           {/loop}
           {/pc}
-          {pc:content  action="position" posid="20" order="listorder ASC" num="1" page="2" catid="10,11"}
+          {pc:content action="poster" spaceid="13" num="1" page="2"}
           {loop $data $k $r}
           <div class="pr2">
             <span>
-            <a href="{$r[url]}" title="{$r[title]}"><img  src="{thumb($r[thumb],226,380)}" alt="{$r[title]}"  width="226" height="380" /></a>
+            <a href="{siteurl($siteid)}/index.php?m=poster&c=index&a=poster_click&siteid={$siteid}&id={$r[id]}" title="{$r[name]}"><img  src="{thumb($r[setting][1][imageurl],226,380)}" alt="{$r[name]}"  width="226" height="380" /></a>
             </span>
           </div>
           {/loop}
           {/pc}
           <div class="pr3">
             <span class="s1">
-            {pc:content  action="position" posid="20" order="listorder ASC" num="1" page="3" catid="10,11"}
-            {loop $data $k $r}
-            <a href="{$r[url]}" title="{$r[title]}"><img src="{thumb($r[thumb],226,185)}" alt="{$r[title]}"  width="226" height="185" /></a>
+            {pc:content action="poster" spaceid="13" num="1" page="3"}
+          {loop $data $k $r}
+            <?php $setting = string2array($r[setting])?>
+            <a href="{siteurl($siteid)}/index.php?m=poster&c=index&a=poster_click&siteid={$siteid}&id={$r[id]}" title="{$r[name]}"><img  src="{thumb($r[setting][1][imageurl],226,185)}" alt="{$r[name]}"  width="226" height="185" /></a>
             {/loop}
             {/pc}</span>
             <span class="s2">
-            {pc:content  action="position" posid="20" order="listorder ASC" num="1" page="4" catid="10,11"}
-            {loop $data $k $r}
-            <a href="{$r[url]}" title="{$r[title]}"><img src="{thumb($r[thumb],226,185)}" alt="{$r[title]}" width="226" height="185" /></a>
+            {pc:content action="poster" spaceid="13" num="1" page="4"}
+          {loop $data $k $r}
+            <a href="{siteurl($siteid)}/index.php?m=poster&c=index&a=poster_click&siteid={$siteid}&id={$r[id]}" title="{$r[name]}"><img  src="{thumb($r[setting][1][imageurl],226,185)}" alt="{$r[name]}" width="226" height="185" /></a>
             {/loop}
             {/pc}</span>
           </div>
-          {pc:content  action="position" posid="20" order="listorder ASC" num="1" page="5" catid="10,11"}
+          {pc:content action="poster" spaceid="13" num="1" page="5"}
           {loop $data $k $r}
           <div class="pr4">
             <span>
-            <a href="{$r[url]}" title="{$r[title]}"><img src="{thumb($r[thumb],226,380)}" alt="{$r[title]}" width="226" height="380" /></a>
+            <a href="{siteurl($siteid)}/index.php?m=poster&c=index&a=poster_click&siteid={$siteid}&id={$r[id]}" title="{$r[name]}"><img  src="{thumb($r[setting][1][imageurl],226,380)}" alt="{$r[name]}" width="226" height="380" /></a>
             </span>
           </div>
           {/loop}
@@ -74,40 +76,40 @@
           <div class="title">个性影像</div>
         </div>
         <div class="cont"> 
-        {pc:content  action="position" posid="20" order="listorder ASC" num="1" page="1" catid="12"}
+        {pc:content action="poster" spaceid="14" num="1" page="1"}
           {loop $data $k $r}
           <div class="pr1">
             <span>
-            <a href="{$r[url]}" title="{$r[title]}"><img src="{thumb($r[thumb],226,380)}" alt="{$r[title]}" width="226" height="380"  /></a>
+            <a href="{siteurl($siteid)}/index.php?m=poster&c=index&a=poster_click&siteid={$siteid}&id={$r[id]}" title="{$r[name]}"><img  src="{thumb($r[setting][1][imageurl],226,380)}" alt="{$r[name]}" width="226" height="380"  /></a>
             </span>
           </div>
           {/loop}
           {/pc}
           <div class="pr2">
             <span class="s1">
-            {pc:content  action="position" posid="20" order="listorder ASC" num="1" page="2" catid="12"}
+            {pc:content action="poster" spaceid="14" num="1" page="2"}
             {loop $data $k $r}
-            <a href="{$r[url]}" title="{$r[title]}"><img src="{thumb($r[thumb],462,185)}" alt="{$r[title]}" width="462" height="185"  /></a>
+            <a href="{siteurl($siteid)}/index.php?m=poster&c=index&a=poster_click&siteid={$siteid}&id={$r[id]}" title="{$r[name]}"><img  src="{thumb($r[setting][1][imageurl],462,185)}" alt="{$r[name]}" width="462" height="185"  /></a>
             {/loop}
             {/pc}</span>
             <span class="s2">
-            {pc:content  action="position" posid="20" order="listorder ASC" num="1" page="3" catid="12"}
+            {pc:content action="poster" spaceid="14" num="1" page="3"}
             {loop $data $k $r}
-            <a href="{$r[url]}" title="{$r[title]}"><img src="{thumb($r[thumb],226,185)}" alt="{$r[title]}" width="226" height="185" /></a>
+            <a href="{siteurl($siteid)}/index.php?m=poster&c=index&a=poster_click&siteid={$siteid}&id={$r[id]}" title="{$r[name]}"><img  src="{thumb($r[setting][1][imageurl],226,185)}" alt="{$r[name]}" width="226" height="185" /></a>
             {/loop}
             {/pc}</span>
             <span class="s3">
-            {pc:content  action="position" posid="20" order="listorder ASC" num="1" page="4" catid="12"}
+            {pc:content action="poster" spaceid="14" num="1" page="4"}
             {loop $data $k $r}
-            <a href="{$r[url]}" title="{$r[title]}"><img src="{thumb($r[thumb],226,185)}" alt="{$r[title]}" width="226" height="185"  /></a>
+            <a href="{siteurl($siteid)}/index.php?m=poster&c=index&a=poster_click&siteid={$siteid}&id={$r[id]}" title="{$r[name]}"><img  src="{thumb($r[setting][1][imageurl],226,185)}" alt="{$r[name]}" width="226" height="185"  /></a>
             {/loop}
             {/pc}</span>
           </div>
-          {pc:content  action="position" posid="20" order="listorder ASC" num="1" page="5" catid="12"}
+          {pc:content action="poster" spaceid="14" num="1" page="5"}
           {loop $data $k $r}
           <div class="pr3">
             <span>
-            <a href="{$r[url]}" title="{$r[title]}"><img src="{thumb($r[thumb],462,380)}" alt="{$r[title]}" width="462" height="380"  /></a>
+            <a href="{siteurl($siteid)}/index.php?m=poster&c=index&a=poster_click&siteid={$siteid}&id={$r[id]}" title="{$r[name]}"><img  src="{thumb($r[setting][1][imageurl],462,380)}" alt="{$r[name]}" width="462" height="380"  /></a>
             </span>
           </div>
           {/loop}
@@ -125,45 +127,45 @@
         <div class="cont">
           <div class="pr1">
             <span class="s1">
-            {pc:content  action="position" posid="20" order="listorder ASC" num="1" page="1" catid="14"}
+            {pc:content action="poster" spaceid="15" num="1" page="1"}
             {loop $data $k $r}
-            <a href="{$r[url]}" title="{$r[title]}"><img src="{thumb($r[thumb],226,185)}" alt="{$r[title]}" width="226" height="185"  /></a>
+            <a href="{siteurl($siteid)}/index.php?m=poster&c=index&a=poster_click&siteid={$siteid}&id={$r[id]}" title="{$r[name]}"><img  src="{thumb($r[setting][1][imageurl],226,185)}" alt="{$r[name]}" width="226" height="185"  /></a>
             {/loop}
             {/pc}</span>
             <span class="s2">
-            {pc:content  action="position" posid="20" order="listorder ASC" num="1" page="2" catid="14"}
+            {pc:content action="poster" spaceid="15" num="1" page="2"}
             {loop $data $k $r}
-            <a href="{$r[url]}" title="{$r[title]}"><img src="{thumb($r[thumb],226,185)}" alt="{$r[title]}" width="226" height="185"  /></a>
+            <a href="{siteurl($siteid)}/index.php?m=poster&c=index&a=poster_click&siteid={$siteid}&id={$r[id]}" title="{$r[name]}"><img  src="{thumb($r[setting][1][imageurl],226,185)}" alt="{$r[name]}" width="226" height="185"  /></a>
             {/loop}
             {/pc}</span>
           </div>
-          {pc:content  action="position" posid="20" order="listorder ASC" num="1" page="3" catid="14"}
+          {pc:content action="poster" spaceid="15" num="1" page="3"}
           {loop $data $k $r}
           <div class="pr2">
             <span>
-            <a href="{$r[url]}" title="{$r[title]}"><img src="{thumb($r[thumb],462,380)}" alt="{$r[title]}" width="462" height="380"  /></a>
+            <a href="{siteurl($siteid)}/index.php?m=poster&c=index&a=poster_click&siteid={$siteid}&id={$r[id]}" title="{$r[name]}"><img  src="{thumb($r[setting][1][imageurl],462,380)}" alt="{$r[name]}" width="462" height="380"  /></a>
           </div>
           {/loop}
           {/pc}
           <div class="pr3">
             <span class="s1">
-            {pc:content  action="position" posid="20" order="listorder ASC" num="1" page="4" catid="14"}
+            {pc:content action="poster" spaceid="15" num="1" page="4"}
             {loop $data $k $r}
-            <a href="{$r[url]}" title="{$r[title]}"><img src="{thumb($r[thumb],226,185)}" alt="{$r[title]}" width="226" height="185"  /></a>
+            <a href="{siteurl($siteid)}/index.php?m=poster&c=index&a=poster_click&siteid={$siteid}&id={$r[id]}" title="{$r[name]}"><img  src="{thumb($r[setting][1][imageurl],226,185)}" alt="{$r[name]}" width="226" height="185"  /></a>
             {/loop}
             {/pc}</span>
             <span class="s2">
-            {pc:content  action="position" posid="20" order="listorder ASC" num="1" page="5" catid="14"}
+            {pc:content action="poster" spaceid="15" num="1" page="5"}
             {loop $data $k $r}
-            <a href="{$r[url]}" title="{$r[title]}"><img src="{thumb($r[thumb],226,185)}" alt="{$r[title]}" width="226" height="185"  /></a>
+            <a href="{siteurl($siteid)}/index.php?m=poster&c=index&a=poster_click&siteid={$siteid}&id={$r[id]}" title="{$r[name]}"><img  src="{thumb($r[setting][1][imageurl],226,185)}" alt="{$r[name]}" width="226" height="185"  /></a>
             {/loop}
             {/pc}</span>
           </div>
-          {pc:content  action="position" posid="20" order="listorder ASC" num="1" page="6" catid="14"}
+          {pc:content action="poster" spaceid="15" num="1" page="6"}
           {loop $data $k $r}
           <div class="pr4">
             <span>
-            <a href="{$r[url]}" title="{$r[title]}"><img src="{thumb($r[thumb],226,380)}" alt="{$r[title]}" width="226" height="380"  /></a>
+            <a href="{siteurl($siteid)}/index.php?m=poster&c=index&a=poster_click&siteid={$siteid}&id={$r[id]}" title="{$r[name]}"><img  src="{thumb($r[setting][1][imageurl],226,380)}" alt="{$r[name]}" width="226" height="380"  /></a>
             </span>
           </div>
           {/loop}
@@ -179,26 +181,26 @@
           <div class="title">个性包装</div>
         </div>
         <div class="cont"> 
-        {pc:content  action="position" posid="20" order="listorder ASC" num="1" page="1" catid="13"}
+        {pc:content action="poster" spaceid="16" num="1" page="1"}
           {loop $data $k $r}
           <div class="pr1">
             <span>
-            <a href="{$r[url]}" title="{$r[title]}"><img src="{thumb($r[thumb],285,380)}" alt="{$r[title]}" width="285" height="380"  /></a>
+            <a href="{siteurl($siteid)}/index.php?m=poster&c=index&a=poster_click&siteid={$siteid}&id={$r[id]}" title="{$r[name]}"><img  src="{thumb($r[setting][1][imageurl],285,380)}" alt="{$r[name]}" width="285" height="380"  /></a>
             </span>
           </div>
           {/loop}
           {/pc}
           <div class="pr2">
             <span class="s1">
-            {pc:content  action="position" posid="20" order="listorder ASC" num="1" page="2" catid="13"}
+            {pc:content action="poster" spaceid="16" num="1" page="2"}
             {loop $data $k $r}
-            <a href="{$r[url]}" title="{$r[title]}"><img src="{thumb($r[thumb],285,185)}" alt="{$r[title]}" width="285" height="185"  /></a>
+            <a href="{siteurl($siteid)}/index.php?m=poster&c=index&a=poster_click&siteid={$siteid}&id={$r[id]}" title="{$r[name]}"><img  src="{thumb($r[setting][1][imageurl],285,185)}" alt="{$r[name]}" width="285" height="185"  /></a>
             {/loop}
             {/pc}</span>
             <span class="s2">
-            {pc:content  action="position" posid="20" order="listorder ASC" num="1" page="3" catid="13"}
+            {pc:content action="poster" spaceid="16" num="1" page="3"}
             {loop $data $k $r}
-            <a href="{$r[url]}" title="{$r[title]}"><img src="{thumb($r[thumb],285,185)}" alt="{$r[title]}" width="285" height="185"  /></a>
+            <a href="{siteurl($siteid)}/index.php?m=poster&c=index&a=poster_click&siteid={$siteid}&id={$r[id]}" title="{$r[name]}"><img  src="{thumb($r[setting][1][imageurl],285,185)}" alt="{$r[name]}" width="285" height="185"  /></a>
             {/loop}
             {/pc}</span>
           </div>
@@ -214,26 +216,26 @@
           <div class="title">镭射防伪</div>
         </div>
         <div class="cont"> 
-        {pc:content  action="position" posid="20" order="listorder ASC" num="1" page="1" catid="15"}
+        {pc:content action="poster" spaceid="17" num="1" page="1"}
           {loop $data $k $r}
           <div class="pr1">
             <span>
-            <a href="{$r[url]}" title="{$r[title]}"><img src="{thumb($r[thumb],285,380)}" alt="{$r[title]}" width="285" height="380"  /></a>
+            <a href="{siteurl($siteid)}/index.php?m=poster&c=index&a=poster_click&siteid={$siteid}&id={$r[id]}" title="{$r[name]}"><img  src="{thumb($r[setting][1][imageurl],285,380)}" alt="{$r[name]}" width="285" height="380"  /></a>
             </span>
           </div>
           {/loop}
           {/pc}
           <div class="pr2">
             <span class="s1">
-            {pc:content  action="position" posid="20" order="listorder ASC" num="1" page="2" catid="15"}
+            {pc:content action="poster" spaceid="17" num="1" page="2"}
             {loop $data $k $r}
-            <a href="{$r[url]}" title="{$r[title]}"><img src="{thumb($r[thumb],285,185)}" alt="{$r[title]}" width="285" height="185"  /></a>
+            <a href="{siteurl($siteid)}/index.php?m=poster&c=index&a=poster_click&siteid={$siteid}&id={$r[id]}" title="{$r[name]}"><img  src="{thumb($r[setting][1][imageurl],285,185)}" alt="{$r[name]}" width="285" height="185"  /></a>
             {/loop}
             {/pc}</span>
             <span class="s2">
-            {pc:content  action="position" posid="20" order="listorder ASC" num="1" page="3" catid="15"}
+           {pc:content action="poster" spaceid="17" num="1" page="3"}
             {loop $data $k $r}
-            <a href="{$r[url]}" title="{$r[title]}"><img src="{thumb($r[thumb],285,185)}" alt="{$r[title]}" width="285" height="185"  /></a>
+            <a href="{siteurl($siteid)}/index.php?m=poster&c=index&a=poster_click&siteid={$siteid}&id={$r[id]}" title="{$r[name]}"><img  src="{thumb($r[setting][1][imageurl],285,185)}" alt="{$r[name]}" width="285" height="185"  /></a>
             {/loop}
             {/pc}</span>
           </div>

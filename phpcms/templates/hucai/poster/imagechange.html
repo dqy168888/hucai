@@ -15,7 +15,11 @@ $(function () {
 var str = "";
 str += "<ul class='slides'>";
 {loop $pinfo $k $p}
-str += "<li><a href='{APP_PATH}index.php?m=poster&c=index&a=poster_click&siteid={$siteid}&id={$p['id']}'><img src='{$p['setting']['1']['imageurl']}' /><img src='{IMG_PATH}hucai/bg/10.jpg' class='other' /></a></li>"; 
+{if $id==12}
+str += "<li><a style='cursor: default;'><img src='{$p['setting']['1']['imageurl']}' /><img src='{IMG_PATH}hucai/bg/10.jpg' class='other' /></a></li>";
+{else}
+str += "<li><a href='{APP_PATH}index.php?m=poster&c=index&a=poster_click&siteid={$siteid}&id={$p['id']}'><img src='{$p['setting']['1']['imageurl']}' /><img src='{IMG_PATH}hucai/bg/10.jpg' class='other' /></a></li>";
+{/if}
 {/loop}     
 str += "</ul>";
 $('#flex_viewport').html(str);

@@ -1,0 +1,27 @@
+{template "content","header"}
+<div class="nybg"> {template "content","about_left"}
+  <div class="nymain">
+    <h2 class="title">
+      <span class="way">您现在的位置：首页 &gt; 关于虎彩 &gt; 虎彩历史</span>
+      虎彩历史</h2>
+    <div class="content">
+      <div class="history"> {pc:content action="lists" catid="$catid" num="25" order="id DESC" page="$page" moreinfo="1"}
+        {loop $data $r}
+        <div class="hi1bg">
+          <div class="hi1">
+            <h3 class="t">{$r[title]}</h3>
+            <div class="text">
+              <div class="pic"><img src="{thumb($r[thumb],170,150)}"  width="170" height="150" /></div>
+              <div class="n1">
+                <p>{$r[description]}</p>
+              </div>
+              <div class="n2">{$r[content]}</div>
+            </div>
+          </div>
+        </div>
+        {/loop}
+        {/pc} </div>
+    </div>
+  </div>
+</div>
+{template "content","footer"}

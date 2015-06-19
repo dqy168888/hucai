@@ -1,0 +1,27 @@
+{template "content","header"}
+<div class="nybg"> {template "content","about_left"}
+  <div class="nymain">
+    <h2 class="title">
+      <span class="way">您现在的位置：首页 &gt; 关于虎彩 &gt; 品牌战略</span>
+      品牌战略</h2>
+    <div class="content">
+      <div class="brands"> {pc:content action="category" catid="$catid" num="25" siteid="$siteid" order="listorder ASC"}
+        {loop $data $r}
+        <h3 class="t"><img src="{IMG_PATH}hucai/about_brand_icon.jpg" /> {$r[catname]}</h3>
+        {pc:content action="lists" catid="$r[catid]" num="25" order="id DESC" page="$page" moreinfo="1"}
+        {loop $data $r}
+        <div class="b_box">
+          <div class="pic"><img src="{thumb($r[thumb],300,227)}"  width="300" height="227" /></div>
+          <div class="text">
+            <p><strong class="b">{$r[title]}</strong></p>
+            <p>{$r[content]}</p>
+          </div>
+        </div>
+        {/loop}
+        {/pc}
+        {/loop}
+        {/pc} </div>
+    </div>
+  </div>
+</div>
+{template "content","footer"}

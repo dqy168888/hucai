@@ -1,0 +1,27 @@
+{template "content","header"}
+<div class="nybg"> {template "content","about_left"}
+  <div class="nymain">
+    <h2 class="title">
+      <span class="way">您现在的位置：首页 &gt; 关于虎彩 &gt; 虎彩文化</span>
+      虎彩文化</h2>
+    <div class="content">
+      <div class="culture">
+        <div class="cult_one">
+          <p class="ps"><img src="{$image}" width="960" alt="{$catname}" /></p>
+          <br />
+          {$description} </div>
+        <div class="cult_two"> {pc:content action="category" catid="$catid" num="25" siteid="$siteid" order="listorder ASC"}
+          {loop $data $r}
+          <div class="b_box">
+            <div class="pic"><img src="{$r[image]}" width="240" height="166" alt="{$r[catname]}" /></div>
+            <div class="text">
+              <p><strong class="b">{$r[catname]}</strong></p>
+              {$r[description]} </div>
+          </div>
+          {/loop}
+          {/pc} </div>
+      </div>
+    </div>
+  </div>
+</div>
+{template "content","footer"}

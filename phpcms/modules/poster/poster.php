@@ -57,7 +57,7 @@ class poster extends admin {
 			}
 		} else {
 			$spaceid = intval($_GET['spaceid']);
-			$sinfo = $this->s_db->get_one(array('spaceid' => $spaceid, 'siteid'=>$this->get_siteid()), 'name, type');
+			$sinfo = $this->s_db->get_one(array('spaceid' => $spaceid, 'siteid'=>$this->get_siteid()), 'name, type ,description');
 			$setting = $this->get_setting($sinfo['type']);
 			$TYPES = get_types();
 			$default = count($setting)>0 ? L('please_select').'&nbsp;&nbsp;&nbsp;&nbsp;' : '';

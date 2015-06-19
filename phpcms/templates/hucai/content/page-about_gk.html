@@ -1,0 +1,34 @@
+{template "content","header"}
+<div class="nybg">
+    {template "content","about_left"}
+    <div class="nymain">
+      <h2 class="title"><span class="way">您现在的位置：首页 &gt; 关于虎彩 &gt; {$catname}</span> {$catname}</h2>
+      <div class="content">
+        <div class="gk">
+          <p><img src="{$image}" width="960" alt="{$catname}" /></p>
+          <br />
+          {$description}
+          <br />
+          {if $content}
+          <div class="sy">
+           		<div class="t">{$title}</div>
+           		{$content}
+           </div>
+           {/if}
+           {pc:content action="category" catid="$catid" num="25" siteid="$siteid" order="listorder ASC"}
+          
+          <div class="company">
+            <ul>
+            {loop $data $r}
+              <li><img src="{$r[image]}" width="300"  alt="{$r[catname]}" />
+                <p>{$r[catname]}</p>
+                </li>
+              {/loop}
+          {/pc}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{template "content","footer"}

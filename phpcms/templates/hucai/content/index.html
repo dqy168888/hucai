@@ -59,7 +59,7 @@ $(".indexNews").hover(function(){
       <ul>
       {loop $data $r}
         <li>
-          <div class="opacity"><a href="#"><img src="{IMG_PATH}hucai/bg/png2.png"></a><a href="#"><img src="{IMG_PATH}hucai/bg/png3.png"></a><a href="#"><img src="{IMG_PATH}hucai/bg/png4s.png"/></a></div>
+          <div class="opacity"><!--<a href="#"><img src="{IMG_PATH}hucai/bg/png2.png"></a><a href="#"><img src="{IMG_PATH}hucai/bg/png3.png"></a><a href="#"><img src="{IMG_PATH}hucai/bg/png4s.png"/></a>--></div>
           <a href="{$r[url]}" title="{$r[title]}"><img src="{thumb($r[thumb],370,280)}" class="opacity" width="370" height="280" />
           <p><span>{str_cut($r[title],36,'')}</span><b>{str_cut($r[description],112)}<i>查看更多</i></b></p>
           </a></li>
@@ -124,7 +124,7 @@ function setVol(num){
       <ul>
       {loop $data $r}
         <li>
-          <div class="opacity"><a href="#"><img src="{IMG_PATH}hucai/bg/png2.png"></a><a href="#"><img src="{IMG_PATH}hucai/bg/png3.png"></a><a href="#"><img src="{IMG_PATH}hucai/bg/png4s.png"/></a></div>
+          <div class="opacity"><!--<a href="#"><img src="{IMG_PATH}hucai/bg/png2.png"></a><a href="#"><img src="{IMG_PATH}hucai/bg/png3.png"></a><a href="#"><img src="{IMG_PATH}hucai/bg/png4s.png"/></a>--></div>
           <a href="{$r[url]}" title="{$r[title]}"><img src="{thumb($r[thumb],370,280)}" class="opacity" width="370" height="280" />
           <p><span>{str_cut($r[title],36,'')}</span><b>{str_cut($r[description],112)}<i>查看更多</i></b></p>
           </a></li>
