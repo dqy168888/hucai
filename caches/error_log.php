@@ -77,3 +77,98 @@
 <?php exit;?>06-16 15:07:10 | 2 | image_type_to_extension() expects parameter 1 to be long, string given | phpcms\libs\classes\image.class.php | 81
 <?php exit;?>06-16 15:07:10 | 2 | image_type_to_extension() expects parameter 1 to be long, string given | phpcms\libs\classes\image.class.php | 81
 <?php exit;?>06-16 15:07:10 | 2 | image_type_to_extension() expects parameter 1 to be long, string given | phpcms\libs\classes\image.class.php | 81
+<?php exit;?>06-17 17:28:25 | 2 | Missing argument 2 for category::delete_child(), called in D:\WWW\hucai\hucai\phpcms\modules\admin\category.php on line 351 and defined | phpcms\modules\admin\category.php | 346
+<?php exit;?>06-17 17:28:37 | 2 | Missing argument 2 for category::delete_child(), called in D:\WWW\hucai\hucai\phpcms\modules\admin\category.php on line 351 and defined | phpcms\modules\admin\category.php | 346
+<?php exit;?>06-18 16:43:11 | 2 | file_put_contents(D:\WWW\hucai\hucai\caches\poster_js/11.js) [<a href='function.file-put-contents'>function.file-put-contents</a>]: failed to open stream: No such file or directory | phpcms\modules\poster\classes\html.class.php | 67
+<?php exit;?>06-18 16:43:11 | 2 | chmod() [<a href='function.chmod'>function.chmod</a>]: No such file or directory | phpcms\modules\poster\classes\html.class.php | 68
+<?php exit;?>06-18 16:43:11 | 2 | file_put_contents(D:\WWW\hucai\hucai\caches\poster_js/12.js) [<a href='function.file-put-contents'>function.file-put-contents</a>]: failed to open stream: No such file or directory | phpcms\modules\poster\classes\html.class.php | 67
+<?php exit;?>06-18 16:43:11 | 2 | chmod() [<a href='function.chmod'>function.chmod</a>]: No such file or directory | phpcms\modules\poster\classes\html.class.php | 68
+<?php exit;?>06-18 16:43:11 | 2 | file_put_contents(D:\WWW\hucai\hucai\caches\poster_js/11.js) [<a href='function.file-put-contents'>function.file-put-contents</a>]: failed to open stream: No such file or directory | phpcms\modules\poster\classes\html.class.php | 67
+<?php exit;?>06-18 16:43:11 | 2 | chmod() [<a href='function.chmod'>function.chmod</a>]: No such file or directory | phpcms\modules\poster\classes\html.class.php | 68
+<?php exit;?>06-18 16:43:11 | 2 | file_put_contents(D:\WWW\hucai\hucai\caches\poster_js/12.js) [<a href='function.file-put-contents'>function.file-put-contents</a>]: failed to open stream: No such file or directory | phpcms\modules\poster\classes\html.class.php | 67
+<?php exit;?>06-18 16:43:11 | 2 | chmod() [<a href='function.chmod'>function.chmod</a>]: No such file or directory | phpcms\modules\poster\classes\html.class.php | 68
+<?php exit;?>06-18 16:47:08 | 2 | file_put_contents(D:\WWW\hucai\hucai\caches\poster_js/11.js) [<a href='function.file-put-contents'>function.file-put-contents</a>]: failed to open stream: No such file or directory | phpcms\modules\poster\classes\html.class.php | 67
+<?php exit;?>06-18 16:47:08 | 2 | chmod() [<a href='function.chmod'>function.chmod</a>]: No such file or directory | phpcms\modules\poster\classes\html.class.php | 68
+<?php exit;?>06-18 16:47:08 | 2 | Invalid argument supplied for foreach() | phpcms\modules\poster\poster.php | 47
+<?php exit;?>06-18 16:48:41 | 2 | file_put_contents(D:\WWW\hucai\hucai\caches\poster_js/11.js) [<a href='function.file-put-contents'>function.file-put-contents</a>]: failed to open stream: No such file or directory | phpcms\modules\poster\classes\html.class.php | 67
+<?php exit;?>06-18 16:48:41 | 2 | chmod() [<a href='function.chmod'>function.chmod</a>]: No such file or directory | phpcms\modules\poster\classes\html.class.php | 68
+<?php exit;?>06-18 17:47:13 | 2 | file_put_contents(D:\WWW\hucai\hucai\caches\poster_js/13.js) [<a href='function.file-put-contents'>function.file-put-contents</a>]: failed to open stream: No such file or directory | phpcms\modules\poster\classes\html.class.php | 67
+<?php exit;?>06-18 17:47:13 | 2 | chmod() [<a href='function.chmod'>function.chmod</a>]: No such file or directory | phpcms\modules\poster\classes\html.class.php | 68
+<?php exit;?>06-18 17:47:13 | 2 | Invalid argument supplied for foreach() | phpcms\modules\poster\poster.php | 47
+<?php exit;?>06-18 17:48:08 | 2 | file_put_contents(D:\WWW\hucai\hucai\caches\poster_js/13.js) [<a href='function.file-put-contents'>function.file-put-contents</a>]: failed to open stream: No such file or directory | phpcms\modules\poster\classes\html.class.php | 67
+<?php exit;?>06-18 17:48:08 | 2 | chmod() [<a href='function.chmod'>function.chmod</a>]: No such file or directory | phpcms\modules\poster\classes\html.class.php | 68
+<?php exit;?>06-18 17:48:08 | 2 | Invalid argument supplied for foreach() | phpcms\modules\poster\poster.php | 47
+<?php exit;?>06-18 17:48:36 | 2 | file_put_contents(D:\WWW\hucai\hucai\caches\poster_js/13.js) [<a href='function.file-put-contents'>function.file-put-contents</a>]: failed to open stream: No such file or directory | phpcms\modules\poster\classes\html.class.php | 67
+<?php exit;?>06-18 17:48:36 | 2 | chmod() [<a href='function.chmod'>function.chmod</a>]: No such file or directory | phpcms\modules\poster\classes\html.class.php | 68
+<?php exit;?>06-18 17:48:36 | 2 | Invalid argument supplied for foreach() | phpcms\modules\poster\poster.php | 47
+<?php exit;?>06-18 17:48:57 | 2 | file_put_contents(D:\WWW\hucai\hucai\caches\poster_js/13.js) [<a href='function.file-put-contents'>function.file-put-contents</a>]: failed to open stream: No such file or directory | phpcms\modules\poster\classes\html.class.php | 67
+<?php exit;?>06-18 17:48:57 | 2 | chmod() [<a href='function.chmod'>function.chmod</a>]: No such file or directory | phpcms\modules\poster\classes\html.class.php | 68
+<?php exit;?>06-18 17:48:57 | 2 | Invalid argument supplied for foreach() | phpcms\modules\poster\poster.php | 47
+<?php exit;?>06-18 18:04:47 | 2 | file_put_contents(D:\WWW\hucai\hucai\caches\poster_js/13.js) [<a href='function.file-put-contents'>function.file-put-contents</a>]: failed to open stream: No such file or directory | phpcms\modules\poster\classes\html.class.php | 67
+<?php exit;?>06-18 18:04:47 | 2 | chmod() [<a href='function.chmod'>function.chmod</a>]: No such file or directory | phpcms\modules\poster\classes\html.class.php | 68
+<?php exit;?>06-18 18:04:47 | 2 | Invalid argument supplied for foreach() | phpcms\modules\poster\poster.php | 47
+<?php exit;?>06-19 00:23:13 | 2 | image_type_to_extension() expects parameter 1 to be long, string given | phpcms\libs\classes\image.class.php | 81
+<?php exit;?>06-19 00:33:09 | 2 | file_put_contents(D:\WWW\hucai\hucai\caches\poster_js/11.js) [<a href='function.file-put-contents'>function.file-put-contents</a>]: failed to open stream: No such file or directory | phpcms\modules\poster\classes\html.class.php | 67
+<?php exit;?>06-19 00:33:09 | 2 | chmod() [<a href='function.chmod'>function.chmod</a>]: No such file or directory | phpcms\modules\poster\classes\html.class.php | 68
+<?php exit;?>06-19 00:33:17 | 2 | file_put_contents(D:\WWW\hucai\hucai\caches\poster_js/11.js) [<a href='function.file-put-contents'>function.file-put-contents</a>]: failed to open stream: No such file or directory | phpcms\modules\poster\classes\html.class.php | 67
+<?php exit;?>06-19 00:33:17 | 2 | chmod() [<a href='function.chmod'>function.chmod</a>]: No such file or directory | phpcms\modules\poster\classes\html.class.php | 68
+<?php exit;?>06-19 12:24:16 | 2 | extract() expects parameter 1 to be array, null given | phpcms\modules\content\classes\content_tag.class.php | 241
+<?php exit;?>06-19 12:26:38 | 2 | extract() expects parameter 1 to be array, null given | phpcms\modules\content\classes\content_tag.class.php | 241
+<?php exit;?>06-19 12:26:39 | 2 | extract() expects parameter 1 to be array, null given | phpcms\modules\content\classes\content_tag.class.php | 241
+<?php exit;?>06-19 12:26:49 | 2 | extract() expects parameter 1 to be array, null given | phpcms\modules\content\classes\content_tag.class.php | 241
+<?php exit;?>06-19 12:26:50 | 2 | extract() expects parameter 1 to be array, null given | phpcms\modules\content\classes\content_tag.class.php | 241
+<?php exit;?>06-19 12:26:50 | 2 | extract() expects parameter 1 to be array, null given | phpcms\modules\content\classes\content_tag.class.php | 241
+<?php exit;?>06-19 12:26:50 | 2 | extract() expects parameter 1 to be array, null given | phpcms\modules\content\classes\content_tag.class.php | 241
+<?php exit;?>06-19 12:26:51 | 2 | extract() expects parameter 1 to be array, null given | phpcms\modules\content\classes\content_tag.class.php | 241
+<?php exit;?>06-19 12:28:21 | 2 | extract() expects parameter 1 to be array, null given | phpcms\modules\content\classes\content_tag.class.php | 241
+<?php exit;?>06-19 12:29:34 | 2 | extract() expects parameter 1 to be array, null given | phpcms\modules\content\classes\content_tag.class.php | 241
+<?php exit;?>06-19 12:30:06 | 2 | extract() expects parameter 1 to be array, null given | phpcms\modules\content\classes\content_tag.class.php | 241
+<?php exit;?>06-19 12:30:32 | 2 | extract() expects parameter 1 to be array, null given | phpcms\modules\content\classes\content_tag.class.php | 241
+<?php exit;?>06-19 12:31:06 | 2 | extract() expects parameter 1 to be array, null given | phpcms\modules\content\classes\content_tag.class.php | 241
+<?php exit;?>06-19 12:31:07 | 2 | extract() expects parameter 1 to be array, null given | phpcms\modules\content\classes\content_tag.class.php | 241
+<?php exit;?>06-19 12:36:41 | 2 | extract() expects parameter 1 to be array, null given | phpcms\modules\content\classes\content_tag.class.php | 245
+<?php exit;?>06-19 12:37:43 | 2 | extract() expects parameter 1 to be array, null given | phpcms\modules\content\classes\content_tag.class.php | 245
+<?php exit;?>06-19 12:38:19 | 2 | extract() expects parameter 1 to be array, null given | phpcms\modules\content\classes\content_tag.class.php | 245
+<?php exit;?>06-19 12:38:54 | 2 | extract() expects parameter 1 to be array, null given | phpcms\modules\content\classes\content_tag.class.php | 245
+<?php exit;?>06-19 12:40:04 | 2 | extract() expects parameter 1 to be array, null given | phpcms\modules\content\classes\content_tag.class.php | 245
+<?php exit;?>06-19 12:40:42 | 2 | extract() expects parameter 1 to be array, null given | phpcms\modules\content\classes\content_tag.class.php | 245
+<?php exit;?>06-19 12:40:45 | 2 | extract() expects parameter 1 to be array, null given | phpcms\modules\content\classes\content_tag.class.php | 245
+<?php exit;?>06-19 12:41:32 | 2 | extract() expects parameter 1 to be array, null given | phpcms\modules\content\classes\content_tag.class.php | 246
+<?php exit;?>06-19 12:41:51 | 2 | extract() expects parameter 1 to be array, null given | phpcms\modules\content\classes\content_tag.class.php | 246
+<?php exit;?>06-19 12:42:39 | 2 | extract() expects parameter 1 to be array, null given | phpcms\modules\content\classes\content_tag.class.php | 242
+<?php exit;?>06-19 12:45:51 | 2 | extract() expects parameter 1 to be array, null given | phpcms\modules\content\classes\content_tag.class.php | 241
+<?php exit;?>06-19 12:45:51 | 2 | extract() expects parameter 1 to be array, null given | phpcms\modules\content\classes\content_tag.class.php | 241
+<?php exit;?>06-19 12:48:33 | 2 | extract() expects parameter 1 to be array, null given | phpcms\modules\content\classes\content_tag.class.php | 241
+<?php exit;?>06-19 12:48:33 | 2 | extract() expects parameter 1 to be array, null given | phpcms\modules\content\classes\content_tag.class.php | 241
+<?php exit;?>06-19 12:48:33 | 2 | extract() expects parameter 1 to be array, null given | phpcms\modules\content\classes\content_tag.class.php | 241
+<?php exit;?>06-19 12:48:33 | 2 | extract() expects parameter 1 to be array, null given | phpcms\modules\content\classes\content_tag.class.php | 241
+<?php exit;?>06-19 12:48:33 | 2 | extract() expects parameter 1 to be array, null given | phpcms\modules\content\classes\content_tag.class.php | 241
+<?php exit;?>06-19 14:43:49 | 2 | extract() expects parameter 1 to be array, null given | phpcms\modules\content\classes\content_tag.class.php | 241
+<?php exit;?>06-19 14:43:49 | 2 | extract() expects parameter 1 to be array, null given | phpcms\modules\content\classes\content_tag.class.php | 241
+<?php exit;?>06-19 14:43:49 | 2 | extract() expects parameter 1 to be array, null given | phpcms\modules\content\classes\content_tag.class.php | 241
+<?php exit;?>06-19 14:43:49 | 2 | extract() expects parameter 1 to be array, null given | phpcms\modules\content\classes\content_tag.class.php | 241
+<?php exit;?>06-19 14:43:49 | 2 | extract() expects parameter 1 to be array, null given | phpcms\modules\content\classes\content_tag.class.php | 241
+<?php exit;?>06-19 14:50:14 | 2 | extract() expects parameter 1 to be array, null given | phpcms\modules\content\classes\content_tag.class.php | 241
+<?php exit;?>06-19 14:50:14 | 2 | extract() expects parameter 1 to be array, null given | phpcms\modules\content\classes\content_tag.class.php | 241
+<?php exit;?>06-19 14:50:14 | 2 | extract() expects parameter 1 to be array, null given | phpcms\modules\content\classes\content_tag.class.php | 241
+<?php exit;?>06-19 14:50:14 | 2 | extract() expects parameter 1 to be array, null given | phpcms\modules\content\classes\content_tag.class.php | 241
+<?php exit;?>06-19 14:50:14 | 2 | extract() expects parameter 1 to be array, null given | phpcms\modules\content\classes\content_tag.class.php | 241
+<?php exit;?>06-19 16:32:18 | 8192 | Function split() is deprecated | caches\caches_model\caches_data\content_update.class.php | 70
+<?php exit;?>06-19 17:12:02 | 8192 | Function split() is deprecated | caches\caches_model\caches_data\content_update.class.php | 70
+<?php exit;?>06-19 17:15:12 | 2 | image_type_to_extension() expects parameter 1 to be long, string given | phpcms\libs\classes\image.class.php | 81
+<?php exit;?>06-19 17:40:53 | 2 | extract() expects parameter 1 to be array, null given | phpcms\modules\content\classes\html.class.php | 182
+<?php exit;?>06-19 17:56:25 | 2 | extract() expects parameter 1 to be array, null given | phpcms\modules\content\classes\content_tag.class.php | 241
+<?php exit;?>06-19 17:56:25 | 2 | extract() expects parameter 1 to be array, null given | phpcms\modules\content\classes\content_tag.class.php | 241
+<?php exit;?>06-19 17:56:25 | 2 | extract() expects parameter 1 to be array, null given | phpcms\modules\content\classes\content_tag.class.php | 241
+<?php exit;?>06-19 17:56:25 | 2 | extract() expects parameter 1 to be array, null given | phpcms\modules\content\classes\content_tag.class.php | 241
+<?php exit;?>06-19 17:56:25 | 2 | extract() expects parameter 1 to be array, null given | phpcms\modules\content\classes\content_tag.class.php | 241
+<?php exit;?>06-19 17:56:26 | 2 | extract() expects parameter 1 to be array, null given | phpcms\modules\content\classes\content_tag.class.php | 241
+<?php exit;?>06-19 17:56:26 | 2 | extract() expects parameter 1 to be array, null given | phpcms\modules\content\classes\content_tag.class.php | 241
+<?php exit;?>06-19 17:56:26 | 2 | extract() expects parameter 1 to be array, null given | phpcms\modules\content\classes\content_tag.class.php | 241
+<?php exit;?>06-19 17:56:26 | 2 | extract() expects parameter 1 to be array, null given | phpcms\modules\content\classes\content_tag.class.php | 241
+<?php exit;?>06-19 17:56:26 | 2 | extract() expects parameter 1 to be array, null given | phpcms\modules\content\classes\content_tag.class.php | 241
+<?php exit;?>06-19 17:56:39 | 2 | extract() expects parameter 1 to be array, null given | phpcms\modules\content\classes\content_tag.class.php | 241
+<?php exit;?>06-19 17:56:39 | 2 | extract() expects parameter 1 to be array, null given | phpcms\modules\content\classes\content_tag.class.php | 241
+<?php exit;?>06-19 17:56:39 | 2 | extract() expects parameter 1 to be array, null given | phpcms\modules\content\classes\content_tag.class.php | 241
+<?php exit;?>06-19 17:56:39 | 2 | extract() expects parameter 1 to be array, null given | phpcms\modules\content\classes\content_tag.class.php | 241
+<?php exit;?>06-19 17:56:39 | 2 | extract() expects parameter 1 to be array, null given | phpcms\modules\content\classes\content_tag.class.php | 241

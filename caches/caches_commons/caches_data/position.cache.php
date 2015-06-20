@@ -52,8 +52,8 @@ return array (
   array (
     'posid' => '2',
     'modelid' => '0',
-    'catid' => '2',
-    'name' => '首页视频新闻',
+    'catid' => '6',
+    'name' => '首页专题活动',
     'maxnum' => '3',
     'extention' => '',
     'listorder' => '2',
